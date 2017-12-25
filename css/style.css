@@ -8,17 +8,58 @@
   background: transparent;
 }
 
+/* General Styling */
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Top Section Styling */
+.sectionTitle {
+  color: #E73C3C;
+  font-size: 3vw;
+  text-align: center;
+  padding-top: 2vh;
+}
+
+.itemTitle{
+  color: #646464;
+}
+
+.button {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap
+}
+
+.button:hover {
+  color: #000 !important;
+  background-color: #ccc !important
+}
+
+.clickedButton {
+  color: #fff !important;
+  background-color: #f44336 !important
+}
+
+.slider {
+  padding-top: 3vh;
+}
+
+/* Top Section */
 .top {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 99vh;
 }
 
 .top p {
@@ -28,10 +69,15 @@ p {
   font-size: 7vw;
 }
 
-.top #liam {
+#liam {
   color: #E73C3C;
 }
 
-.top #rosenfeld {
+#rosenfeld {
   color: #FFFFFF;
+}
+
+/* App Section */
+.app {
+  text-align: center;
 }
