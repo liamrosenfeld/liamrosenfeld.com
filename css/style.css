@@ -13,15 +13,69 @@ p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
 .sectionTitle {
   color: #E73C3C;
-  font-size: 3vw;
+  font-size: calc(12px + 3vw);
   text-align: center;
   padding-top: 2vh;
 }
 
 .itemTitle{
+  font-size: calc(12px + 2vw);
   color: #646464;
+}
+
+/* Top Section */
+.top {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 99vh;
+}
+
+.top p {
+  text-align: center;
+  position: relative;
+  top: 45vh;
+  font-size: calc(20px + 7vw);
+}
+
+#liam {
+  color: #E73C3C;
+}
+
+#rosenfeld {
+  color: #FFFFFF;
+}
+
+/* Slider Sections */
+.app {
+  text-align: center;
+  height: 70vh;
+}
+
+.appSlides {
+
+  height: 55vh;
+}
+
+.image {
+
+}
+
+.text {
+
 }
 
 .button {
@@ -40,44 +94,15 @@ p {
 }
 
 .button:hover {
-  color: #000 !important;
-  background-color: #ccc !important
+  color: #000;
+  background-color: #ccc;
 }
 
 .clickedButton {
-  color: #fff !important;
-  background-color: #f44336 !important
+  color: #fff;
+  background-color: #E73C3C;
 }
 
 .slider {
   padding-top: 3vh;
-}
-
-/* Top Section */
-.top {
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 99vh;
-}
-
-.top p {
-  text-align: center;
-  position: relative;
-  top: 45vh;
-  font-size: 7vw;
-}
-
-#liam {
-  color: #E73C3C;
-}
-
-#rosenfeld {
-  color: #FFFFFF;
-}
-
-/* App Section */
-.app {
-  text-align: center;
 }
