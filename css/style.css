@@ -132,3 +132,16 @@ hr {
 .slider {
   padding-top: 3vh;
 }
+
+/* Footer */
+footer {
+  display: block;
+  background-color: #646464;
+  height: 10vh;
+}
+
+footer p {
+  font-size: 16px;
+  text-align: center;
+  color: #FFFFFF;
+}
