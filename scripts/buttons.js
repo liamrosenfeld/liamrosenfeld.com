@@ -34,22 +34,22 @@ function showAppDivs(n) {
 var webSlideIndex = 1;
 showWebDivs(webSlideIndex);
 
-function plusWebDivs(m) {
-  showWebDivs(webSlideIndex += m);
+function plusWebDivs(o) {
+  showWebDivs(webSlideIndex += o);
 }
 
-function currentWebDiv(m) {
-  showWebDivs(webSlideIndex = m);
+function currentWebDiv(o) {
+  showWebDivs(webSlideIndex = o);
 }
 
-function showWebDivs(m) {
+function showWebDivs(o) {
   var j;
   var y = document.getElementsByClassName("webSlides");
   var webDots = document.getElementsByClassName("webButton");
-  if (m > y.length) {
+  if (o > y.length) {
     webSlideIndex = 1
   }
-  if (m < 1) {
+  if (o < 1) {
     webSlideIndex = y.length
   }
   for (j = 0; j < y.length; j++) {
