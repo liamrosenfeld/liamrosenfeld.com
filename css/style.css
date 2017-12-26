@@ -64,10 +64,10 @@ hr {
   color: #FFFFFF;
 }
 
-/* Slider Sections */
+/* Content Sections */
 @media all and (min-width: 890px) {
   /* CSS rules here for screens above 890px */
-  .app, .website {
+  .app, .website, .music {
     text-align: center;
     min-height: 75vh;
     position: relative;
@@ -76,14 +76,14 @@ hr {
 
 @media all and (max-width: 890px) {
   /* CSS rules here for screens lower than 890px */
-  .app, .website {
+  .app, .website, .music{
     text-align: center;
     min-height: 90vh;
     position: relative;
   }
 }
 
-.appSlides, .webSlides {
+.appSlides, .webSlides, .musicalExtravaganza {
   text-align: center;
   padding: 20px;
 }
