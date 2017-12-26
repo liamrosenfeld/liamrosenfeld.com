@@ -30,9 +30,13 @@ hr {
   padding-top: 2vh;
 }
 
-.itemTitle{
+.itemTitle {
   font-size: calc(12px + 2vw);
   color: #646464;
+}
+
+.itemDescription {
+  padding-top: 2vh;
 }
 
 /* Top Section */
@@ -60,22 +64,45 @@ hr {
 }
 
 /* Slider Sections */
-.app {
-  text-align: center;
-  height: 70vh;
+@media all and (min-width: 890px) {
+  /* CSS rules here for screens above 890px */
+  .app {
+    text-align: center;
+    min-height: 75vh;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 890px) {
+  /* CSS rules here for screens lower than 890px */
+  .app {
+    text-align: center;
+    min-height: 90vh;
+    position: relative;
+  }
 }
 
 .appSlides {
-
-  height: 55vh;
+  text-align: center;
+  padding: 20px;
 }
 
 .image {
-
+  display: inline-block;
+  padding: 20px;
+  vertical-align:top;
 }
 
 .text {
+  display: inline-block;
+  padding: 20px;
+  vertical-align:top;
+}
 
+.buttons{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
 }
 
 .button {
