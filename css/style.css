@@ -106,7 +106,7 @@ hr {
   left: 47%;
 }
 
-.button {
+.appButton, .webButton {
   border: none;
   display: inline-block;
   outline: 0;
