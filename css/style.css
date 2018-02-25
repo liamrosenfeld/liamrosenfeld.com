@@ -72,6 +72,20 @@ hr {
     min-height: 75vh;
     position: relative;
   }
+
+  .mainImage {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    padding: 20px;
+    vertical-align:top;
+  }
+
+  .actionImage {
+    width: 15%;
+    height: auto;
+  }
+
 }
 
 @media all and (max-width: 890px) {
@@ -81,17 +95,25 @@ hr {
     min-height: 90vh;
     position: relative;
   }
+
+  .mainImage {
+    width: 90%;
+    height: auto;
+    display: inline-block;
+    padding: 20px;
+    vertical-align:top;
+  }
+
+  .actionImage {
+    width: 70%;
+    height: auto;
+  }
+
 }
 
 .appSlides, .webSlides, .musicalExtravaganza {
   text-align: center;
   padding: 20px;
-}
-
-.image {
-  display: inline-block;
-  padding: 20px;
-  vertical-align:top;
 }
 
 .text {
