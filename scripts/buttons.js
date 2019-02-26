@@ -1,63 +1,27 @@
-// App Slides
-var appSlideIndex = 1;
-showAppDivs(appSlideIndex);
+var indexes = {"app": 0, "web": 0};
 
-function plusAppDivs(n) {
-  showAppDivs(appSlideIndex += n);
+function showSlide(prefix, index) {
+  // Show Slide
+  var slides = document.getElementsByClassName(prefix + "Slides");
+  if (index >= slides.length) {
+    indexes[prefix] = 0;
+  } else if (index < 0) {
+    indexes[prefix] = slides.length - 1;
+  } else {
+    indexes[prefix] = index;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[indexes[prefix]].style.display = "block";
+
+  // Update Buttons
+  var buttons = document.getElementsByClassName(prefix + "Button");
+  for (i = 0; i < buttons.length; i++) {
+    buttons[i].className = buttons[i].className.replace(" clickedButton", "");
+  }
+  buttons[indexes[prefix]].className += " clickedButton";
 }
 
-function currentAppDiv(n) {
-  showAppDivs(appSlideIndex = n);
-}
-
-function showAppDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("appSlides");
-  var appDots = document.getElementsByClassName("appButton");
-  if (n > x.length) {
-    appSlideIndex = 1
-  }
-  if (n < 1) {
-    appSlideIndex = x.length
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < appDots.length; i++) {
-    appDots[i].className = appDots[i].className.replace(" clickedButton", "");
-  }
-  x[appSlideIndex - 1].style.display = "block";
-  appDots[appSlideIndex - 1].className += " clickedButton";
-}
-
-// Website Slides
-var webSlideIndex = 1;
-showWebDivs(webSlideIndex);
-
-function plusWebDivs(o) {
-  showWebDivs(webSlideIndex += o);
-}
-
-function currentWebDiv(o) {
-  showWebDivs(webSlideIndex = o);
-}
-
-function showWebDivs(o) {
-  var j;
-  var y = document.getElementsByClassName("webSlides");
-  var webDots = document.getElementsByClassName("webButton");
-  if (o > y.length) {
-    webSlideIndex = 1
-  }
-  if (o < 1) {
-    webSlideIndex = y.length
-  }
-  for (j = 0; j < y.length; j++) {
-    y[j].style.display = "none";
-  }
-  for (j = 0; j < webDots.length; j++) {
-    webDots[j].className = webDots[j].className.replace(" clickedButton", "");
-  }
-  y[webSlideIndex - 1].style.display = "block";
-  webDots[webSlideIndex - 1].className += " clickedButton";
-}
+showSlide("app", 0);
+showSlide("web", 0);
