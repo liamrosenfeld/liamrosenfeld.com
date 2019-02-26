@@ -22,6 +22,7 @@ h1 {
   font-size: calc(20px + 7vw);
   margin-left: 1vw;
   margin-right: 1vw;
+  min-height: calc(20px + 7vw);
 }
 
 h2 {
@@ -31,6 +32,12 @@ h2 {
   text-align: center;
   padding-top: 2vh;
   height: calc(12px + 3vw + 2vh);
+}
+
+h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: calc(12px + 2vw);
+  color: #646464;
 }
 
 p {
@@ -52,17 +59,12 @@ br {
 }
 
 /* Content Sections */
-.itemTitle {
-  font-size: calc(12px + 2vw);
-  color: #646464;
-}
-
 .itemDescription {
   padding-top: 2vh;
   padding-bottom: 4vh;
 }
 
-.app, .website, .music {
+.content {
   text-align: center;
   position: relative;
 }
@@ -70,11 +72,11 @@ br {
 @media all and (min-width: 890px) {
   /* CSS rules here for screens above 890px */
   .mainImage {
-    width: 25%;
     height: auto;
     display: inline-block;
     padding: 20px;
     vertical-align:top;
+    max-height: 30vh;
   }
 
   .actionImage {
@@ -101,7 +103,7 @@ br {
 
 }
 
-.appSlides, .webSlides, .musicalExtravaganza {
+.appSlides, .webSlides, .randomSlides, .musicalExtravaganza {
   text-align: center;
   padding: 20px;
 }
@@ -112,7 +114,7 @@ br {
   vertical-align:top;
 }
 
-.appButton, .webButton {
+.appButton, .webButton, .randomButton {
   border: none;
   display: inline-block;
   outline: 0;
@@ -138,7 +140,7 @@ br {
 }
 
 .slider {
-  padding-top: 3vh;
+  min-height: 35vh;
 }
 
 

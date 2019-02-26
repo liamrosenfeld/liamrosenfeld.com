@@ -1,4 +1,4 @@
-var indexes = {"app": 0, "web": 0};
+var indexes = {"app": 0, "web": 0, "random": 0};
 
 function showSlide(prefix, index) {
   // Show Slide
@@ -23,5 +23,6 @@ function showSlide(prefix, index) {
   buttons[indexes[prefix]].className += " clickedButton";
 }
 
-showSlide("app", 0);
-showSlide("web", 0);
+for (var section in indexes) {
+  showSlide(section, 0);
+}
