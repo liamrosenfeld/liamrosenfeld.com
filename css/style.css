@@ -1,3 +1,8 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+/* Boilerplate */
 * {
   margin: 0;
   padding: 0;
@@ -8,28 +13,45 @@
   background: transparent;
 }
 
-/* General Styling */
+
+/* General Fonts*/
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  position: relative;
+  font-size: calc(20px + 7vw);
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+h2 {
+  color: #000000;
+  font-family: 'Roboto Mono', monospace;
+  font-size: calc(12px + 3vw);
+  text-align: center;
+  padding-top: 2vh;
+  height: calc(12px + 3vw + 2vh);
+}
+
 p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-hr {
+br {
   display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
+  line-height: 8vh;
 }
 
-.sectionTitle {
-  color: #E73C3C;
-  font-size: calc(12px + 3vw);
-  text-align: center;
-  padding-top: 2vh;
+/* Top Section */
+.top {
+  background-color: #000000;
+  height: 60vh;
+  display:flex;
+  align-items: center; /* Vertical center alignment */
+  justify-content: center; 
 }
 
+/* Content Sections */
 .itemTitle {
   font-size: calc(12px + 2vw);
   color: #646464;
@@ -40,39 +62,13 @@ hr {
   padding-bottom: 4vh;
 }
 
-/* Top Section */
-.top {
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 99vh;
-}
-
-.top p {
+.app, .website, .music {
   text-align: center;
   position: relative;
-  top: 45vh;
-  font-size: calc(20px + 7vw);
 }
 
-#liam {
-  color: #E73C3C;
-}
-
-#rosenfeld {
-  color: #FFFFFF;
-}
-
-/* Content Sections */
 @media all and (min-width: 890px) {
   /* CSS rules here for screens above 890px */
-  .app, .website, .music {
-    text-align: center;
-    min-height: 75vh;
-    position: relative;
-  }
-
   .mainImage {
     width: 25%;
     height: auto;
@@ -90,12 +86,6 @@ hr {
 
 @media all and (max-width: 890px) {
   /* CSS rules here for screens lower than 890px */
-  .app, .website, .music{
-    text-align: center;
-    min-height: 90vh;
-    position: relative;
-  }
-
   .mainImage {
     width: 90%;
     height: auto;
@@ -120,10 +110,6 @@ hr {
   display: inline-block;
   padding: 20px;
   vertical-align:top;
-}
-
-.buttons{
-  /* TODO: Send to bottom of container  */
 }
 
 .appButton, .webButton {
@@ -155,19 +141,28 @@ hr {
   padding-top: 3vh;
 }
 
+
 /* Footer */
 footer {
   display: block;
   background-color: #646464;
   height: 10vh;
+  text-align:center;
 }
 
 footer a:link {
   text-decoration: none;
+  color: lightgray;
 }
 
 footer p {
-  font-size: 16px;
+  font-size: 2vh;
   text-align: center;
   color: #FFFFFF;
+  padding-bottom: 0.5vh;
+}
+
+footer .text {
+  padding-top: 2.5vh;
+  margin: 0 auto;
 }
