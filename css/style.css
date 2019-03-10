@@ -16,7 +16,6 @@
 
 /* General Fonts*/
 h1 {
-  font-family: 'Roboto Mono', monospace;
   text-align: center;
   position: relative;
   font-size: calc(20px + 7vw);
@@ -27,7 +26,6 @@ h1 {
 
 h2 {
   color: #000000;
-  font-family: 'Roboto Mono', monospace;
   font-size: calc(12px + 3vw);
   text-align: center;
   padding-top: 2vh;
@@ -44,9 +42,8 @@ p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-br {
-  display: block;
-  line-height: 8vh;
+.mono {
+  font-family: SFMono-Regular, "Roboto Mono", Menlo, monospace;
 }
 
 /* Top Section */
@@ -67,6 +64,7 @@ br {
 .content {
   text-align: center;
   position: relative;
+  padding-bottom: 10vh;
 }
 
 @media all and (min-width: 890px) {
