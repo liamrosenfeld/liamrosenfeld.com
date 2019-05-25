@@ -1,4 +1,4 @@
-var indexes = {"app": 0, "web": 0, "random": 0};
+var indexes = {"app": 0, "random": 0};
 
 function showSlide(prefix, index) {
   // Show Slide

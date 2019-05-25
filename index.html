@@ -17,16 +17,14 @@
   <body>
     <!--Top Section-->
     <div class="top">
-        <h1 class="mono">
-          <span class="typer" id="main" data-words="Hello I'm Liam Rosenfeld!,I Make Things.,Scroll To See Them!" data-colors="white" data-delay="100" data-deleteDelay="1000"></span>
+        <h1>
+          <span class="typer" id="main" data-words="Hello I'm Liam Rosenfeld! I Make Things. (including this site)" data-colors="white" data-delay="60"></span>
         </h1>
     </div>
 
     <!--App Section-->
     <div class="content">
-      <h2 class="mono">
-          <span class="typer" id="main" data-words="Apps" data-colors="black" data-delay="100" data-deleteDelay="7500"></span>
-      </h2>
+      <h2>Apps</h2>
 
       <div class="slider">
 
@@ -36,7 +34,10 @@
             <h3>Image to ASCII Art</h3>
             <p class="itemDescription">An iOS app that can turn any image into ASCII art.</p>
             <a href="https://itunes.apple.com/us/app/image-to-ascii-art/id1329402459" target="_blank">
-              <img class="actionImage" src="./img/app-store.jpg" alt="Download on the App Store">
+              <img class="actionImage" src="./img/appstore.svg" alt="Download on the App Store">
+            </a> <br/>
+            <a href="https://github.com/liamrosenfeld/Image-to-Ascii-Art" target="_blank">
+              <img class="actionImage" src="./img/github.svg" alt="View on GitHub">
             </a>
           </div>
         </div>
@@ -46,7 +47,9 @@
           <div class="text">
             <h3>Iconology</h3>
             <p class="itemDescription">I got tired of manually exporting every Xcode icon size, so I made a mac app to do it.</p>
-            <p> In Development... </p>
+            <a href="https://github.com/liamrosenfeld/Iconology" target="_blank">
+              <img class="actionImage" src="./img/github.svg" alt="View on GitHub">
+            </a>
           </div>
         </div>
 
@@ -59,56 +62,35 @@
 
     </div>
 
-    <!--Websites Section-->
-    <div class="content">
-      <h2 class="mono">
-        <span class="typer" id="main" data-words="Websites" data-colors="black" data-delay="100" data-deleteDelay="7500"></span>
-      </h2>
-
-      <div class="slider">
-
-        <div class="webSlides">
-          <div class="text">
-            <h3>This Website</h3>
-            <p class="itemDescription">If you got this far you must like it...</p>
-          </div>
-        </div>
-
-        <div class="webSlides">
-          <img class="mainImage" src="./img/spacePreview.jpg" alt="Website"></img>
-          <div class="text">
-            <h3>Space: Past, Present, and Future</h3>
-            <p class="itemDescription">A website made for the Flordia Technology Student Association web design competition. It won.</p>
-            <a href="http://www.liamrosenfeld.com/TSA-Web-Design/" target="_blank">
-              <p> Check it out! <p>
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="buttons">
-        <button class="webButton" onclick="showSlide('web', 0)">1</button>
-        <button class="webButton" onclick="showSlide('web', 1)">2</button>
-      </div>
-
-    </div>
-
     <!--Random Section-->
     <div class="content">
-        <h2 class="mono">
-          <span class="typer" id="main" data-words="Random Projects" data-colors="black" data-delay="100" data-deleteDelay="7500"></span>
-        </h2>
+        <h2>Random</h2>
   
         <div class="slider">
+
+          <div class="randomSlides">
+              <img class="mainImage" src="./img/fourier.png" alt="Swift Logo Drawn from Trig Functions"></img>
+              <div class="text">
+                <h3>Fourier Artist</h3>
+                <p class="itemDescription">My accepted 2019 WWDC Scholarship Application. It generates the equation for a path (stored as a JSON array of points) and then displays it using orbiting epicycles. The Fourier Transform and a description of the math can be found on the first page.</p>
+
+                <a href="https://github.com/liamrosenfeld/FourierArtist" target="_blank">
+                  <img class="actionImage" src="./img/github.svg" alt="View on GitHub">
+                </a>
+              </div>
+            </div>
 
           <div class="randomSlides">
             <img class="mainImage" src="./img/animalFarm.jpg" alt="ASCII Art of Sign Bunny"></img>
             <div class="text">
               <h3>Animal Farm</h3>
               <p class="itemDescription">A Discord bot that sends custom animal ASCII art messages.</p>
+
               <a href="https://discordbots.org/bot/511688790994059267" target="_blank">
-                <p> Check it out! <p>
+                <img class="actionImage" src="./img/discord.svg" alt="View Bot Page">
+              </a><br/>
+              <a href="https://github.com/liamrosenfeld/AnimalFarmBot" target="_blank">
+                <img class="actionImage" src="./img/github.svg" alt="View on GitHub">
               </a>
             </div>
           </div>
@@ -117,9 +99,13 @@
             <img class="mainImage" src="./img/porgifyLogo.jpg" alt="Porgify Logo"></img>
             <div class="text">
               <h3>Porgify</h3>
-              <p class="itemDescription">A chrome extension that turns all images into Porgs.</p>
+              <p class="itemDescription">Porgify is a chrome extension that turns all images into Porgs. Created during the year 'The Force Awakens' came out, it was my first foray into the world of open source.</p>
+              
               <a href="https://chrome.google.com/webstore/detail/porgify/anohiacdcfnoceaialpnnbbdcecamfkl" target="_blank">
-                <p> Check it out! <p>
+                <img class="actionImage" src="./img/chrome.svg" alt="View on Chrome Web Store">
+              </a> <br/>
+              <a href="https://github.com/liamrosenfeld/Porgify" target="_blank">
+                <img class="actionImage" src="./img/github.svg" alt="View on GitHub">
               </a>
             </div>
           </div>
@@ -129,22 +115,21 @@
         <div class="buttons">
           <button class="randomButton" onclick="showSlide('random', 0)">1</button>
           <button class="randomButton" onclick="showSlide('random', 1)">2</button>
+          <button class="randomButton" onclick="showSlide('random', 2)">3</button>
         </div>
   
       </div>
 
     <!--Music Section-->
     <div class="content">
-      <h2 class="mono">
-          <span class="typer" id="main" data-words="Music" data-colors="black" data-delay="100" data-deleteDelay="7500"></span>
-      </h2>
+      <h2>Music</h2>
       <div class="musicalExtravaganza">
         <img class="mainImage" src="./img/musicLogo.jpg" alt="Youtube Channel Logo"></img>
         <div class="text">
           <h3>Musical Extravaganza</h3>
           <p class="itemDescription">A youtube channel with arrangments of popular songs, all by ear. All the sheet music is available for free.</p>
           <a href="https://www.youtube.com/musicalextravaganza" target="_blank">
-            <img class="actionImage" src="./img/playButton.jpg" alt="Youtube Play Button">
+            <img class="actionImage" src="./img/youtube.svg" alt="View on YouTube">
           </a>
         </div>
       </div>
