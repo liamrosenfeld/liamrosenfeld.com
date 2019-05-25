@@ -31,12 +31,13 @@ h2 {
   font-size: calc(12px + 3vw);
   text-align: center;
   padding-top: 2vh;
+  padding-bottom: 1vh;
   height: calc(12px + 3vw + 2vh);
 }
 
 h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: calc(12px + 2vw);
+  font-size: calc(12px + 1.5vw);
   color: #646464;
 }
 
@@ -59,49 +60,10 @@ p {
   padding-bottom: 4vh;
 }
 
-.content {
+.contentSection {
   text-align: center;
   position: relative;
-  padding-bottom: 10vh;
-}
-
-@media all and (min-width: 890px) {
-  /* CSS rules here for screens above 890px */
-  .mainImage {
-    height: auto;
-    display: inline-block;
-    padding: 20px;
-    vertical-align:top;
-    max-height: 30vh;
-  }
-
-  .actionImage {
-    width: 15%;
-    height: auto;
-  }
-
-}
-
-@media all and (max-width: 890px) {
-  /* CSS rules here for screens lower than 890px */
-  .mainImage {
-    width: 90%;
-    height: auto;
-    display: inline-block;
-    padding: 20px;
-    vertical-align:top;
-  }
-
-  .actionImage {
-    width: 70%;
-    height: auto;
-  }
-
-}
-
-.appSlides, .webSlides, .randomSlides, .musicalExtravaganza {
-  text-align: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 .text {
@@ -110,7 +72,61 @@ p {
   vertical-align:top;
 }
 
-.appButton, .webButton, .randomButton {
+.actionImage {
+  padding: 1vh;
+}
+
+.mainImage {
+    display: inline-block;
+    object-fit: contain;
+    padding: 20px;
+    vertical-align:top;
+  }
+
+@media all and (min-width: 1325px) {
+  /* CSS rules here for screens above 1325 px */
+  .mainImage {
+    height: auto;
+    max-height: 30vh;
+  }
+
+  .actionImage {
+    width: 25%;
+    height: auto;
+  }
+
+  .content p {
+    width: 40vw
+  }
+
+  .content {
+    height: 40vh;
+    padding-bottom: 1vh;
+  }
+}
+
+@media all and (max-width: 1325px) {
+  /* CSS rules here for screens lower than 1325 px */
+  .mainImage {
+    width: 80%;
+    max-height: 40vh;
+  }
+
+  .actionImage {
+    max-height: 5vh;
+    width: 70%;
+    height: auto;
+  }
+
+  .content {
+    height: calc(50vh + 35vw);
+    padding-bottom: 1vh;
+  }
+
+}
+
+/* Button/Slider */
+.appButton, .randomButton {
   border: none;
   display: inline-block;
   outline: 0;
@@ -124,7 +140,7 @@ p {
   cursor: pointer;
   white-space: nowrap
 }
-
+/*  */
 .button:hover {
   color: #000;
   background-color: #ccc;
@@ -135,9 +151,6 @@ p {
   background-color: #E73C3C;
 }
 
-.slider {
-  min-height: 35vh;
-}
 
 
 /* Footer */
