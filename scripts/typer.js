@@ -1,74 +1,52 @@
-var Typer = function(element) {
-  this.element = element;
-  this.words = element.dataset.words.split("STOP").filter(function(v){return v;}); // non empty words
-  this.delay = element.dataset.delay || 200;
-  this.deleteDelay = element.dataset.deletedelay || element.dataset.deleteDelay || 800;
+"use strict";
 
-  this.progress = { word:0, char:0, building:true, atWordEnd:false, looped: 0 };
-  this.typing = true;
+const Typer = class {
+  constructor(element) {
+    // The HTML Element
+    this.element = element;
 
-  var colors = element.dataset.colors || "black";
-  this.colors = colors.split(",");
-  this.element.style.color = this.colors[0];
-  this.colorIndex = 0;
+    // Constants
+    this.words = element.innerHTML;
+    this.delay = 60;
+    this.element.style.color = "white";
 
-  this.doTyping();
-};
-
-Typer.prototype.start = function() {
-  if (!this.typing) {
+    // Counters
+    this.char = 0;
     this.typing = true;
-    this.doTyping();
   }
-};
-Typer.prototype.stop = function() {
-  this.typing = false;
-};
-Typer.prototype.doTyping = function() {
-  var e = this.element;
-  var p = this.progress;
-  var w = p.word;
-  var c = p.char;
-  var currentDisplay = [...this.words[w]].slice(0, c).join("");
-  p.atWordEnd = false;
 
-  e.innerHTML = currentDisplay;
+  doTyping() {
+    // Set Display
+    var currentDisplay = this.words.split("").slice(0, this.char).join("");
+    this.element.innerHTML = currentDisplay;
 
-  if (p.building) {
-    if (p.char == [...this.words[w]].length) {
-      p.building = false;
-      p.atWordEnd = true;
+    // Go To Next Char (If There)
+    if (this.char == this.words.length) {
+      this.typing = false;
     } else {
-      p.char += 1;
+      this.char += 1;
     }
-  } else {
-    if (p.char == 0) {
-      p.building = true;
-      p.word = (p.word + 1) % this.words.length;
-      this.colorIndex = (this.colorIndex + 1) % this.colors.length;
-      this.element.style.color = this.colors[this.colorIndex];
-    } else {
-      p.char -= 1;
+
+    // Call Again After Delay
+    var myself = this;
+    if (this.typing) {
+      setTimeout(function() {
+        myself.doTyping();
+      }, this.delay);
     }
   }
 
-  if(p.atWordEnd) p.looped += 1;
-
-  if(!p.building){
-    this.typing = false;
-  }
-
-  var myself = this;
-  setTimeout(function() {
-    if (myself.typing) { myself.doTyping(); };
-  }, p.atWordEnd ? this.deleteDelay : this.delay);
-};
+}
 
 function TyperSetup() {
-  var typers = {};
+  // Get Elements
   var elements = document.getElementsByClassName("typer");
+
+  // Create Instances and Start
+  var typers = {};
   for (var i = 0, e; e = elements[i++];) {
     typers[e.id] = new Typer(e);
+    typers[e.id].doTyping();
   }
 }
 

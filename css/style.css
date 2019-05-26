@@ -88,7 +88,7 @@ p {
   background-color: #dddddd
 }
 
-.randomSection {
+.experimentalSection {
   background-color: #bbbbbb
 }
 
@@ -143,7 +143,7 @@ p {
 }
 
 /* Button/Slider */
-.appButton, .randomButton {
+.appButton, .experimentalButton {
   border: none;
   display: inline-block;
   outline: 0;
