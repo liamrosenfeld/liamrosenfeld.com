@@ -17,7 +17,7 @@ const Typer = class {
 
   doTyping() {
     // Set Display
-    var currentDisplay = this.words.split("").slice(0, this.char).join("");
+    const currentDisplay = this.words.substring(0, this.char);
     this.element.innerHTML = currentDisplay;
 
     // Go To Next Char (If There)
@@ -40,7 +40,7 @@ const Typer = class {
 
 function TyperSetup() {
   // Get Elements
-  var elements = document.getElementsByClassName("typer");
+  const elements = document.getElementsByClassName("typer");
 
   // Create Instances and Start
   var typers = {};

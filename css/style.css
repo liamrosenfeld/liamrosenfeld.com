@@ -122,7 +122,7 @@ p {
   /* CSS rules here for screens lower than 1325 px */
   .mainImage {
     width: 80%;
-    max-height: 40vh;
+    max-height: 30vh;
   }
 
   .actionImage {
@@ -174,8 +174,8 @@ p {
 footer {
   display: block;
   background-color: #646464;
-  height: 10vh;
   text-align:center;
+  padding: 4%;
 }
 
 footer a:link {
@@ -184,13 +184,51 @@ footer a:link {
 }
 
 footer p {
-  font-size: 2vh;
+  font-size: 1.25vh;
   text-align: center;
   color: #FFFFFF;
+}
+
+.socialLinks {
+  padding-top: 0.5vh;
   padding-bottom: 0.5vh;
 }
 
-footer .description {
-  padding-top: 2.5vh;
-  margin: 0 auto;
+.socialLinks a {
+  display: inline-block;
+  height: 3vh;
+}
+
+.socialLinks img {
+  height: 100%;
+  width: auto;
+}
+
+.privacy {
+  position: relative;
+  display: inline-block;
+}
+
+.privacy .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.privacy:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
