@@ -1,5 +1,3 @@
-"use strict";
-
 const Typer = class {
   constructor(element) {
     // The HTML Element
@@ -44,7 +42,7 @@ function TyperSetup() {
 
   // Create Instances and Start
   var typers = {};
-  for (var i = 0, e; e = elements[i++];) {
+  for (let e of elements) {
     typers[e.id] = new Typer(e);
     typers[e.id].doTyping();
   }

@@ -1,28 +1,47 @@
-var indexes = {"app": 0, "experimental": 0};
+var indexes = {"app": -1, "experimental": -1};
 
 function showSlide(prefix, index) {
-  // Show Slide
-  var slides = document.getElementsByClassName(prefix + "Slides");
-  if (index >= slides.length) {
-    indexes[prefix] = 0;
-  } else if (index < 0) {
-    indexes[prefix] = slides.length - 1;
+  // return if already selected
+  if (indexes[prefix] < 0) {
+    index = 0;
+  } else if (index == indexes[prefix]) {
+    return;
   } else {
-    indexes[prefix] = index;
+    // get animation for slide
+    var animation = (index < indexes[prefix]) ? "fadeInLeft" : "fadeInRight";
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  console.log(animation);
+  // Get Slides
+  var slides = document.getElementsByClassName(prefix + "Slides");
+
+  // Update Index
+  const origIndex = indexes[prefix];
+  indexes[prefix] = index;
+
+  // Hide All Slides
+  for (let slide of slides) {
+    slide.classList = [slide.classList[0]];
+    slide.style.display = "none";
   }
-  slides[indexes[prefix]].style.display = "block";
+
+  // show slide
+  var slide = slides[indexes[prefix]];
+  slide.classList.add("animated", animation);
+  slide.style.display = "block";
 
   // Update Buttons
   var buttons = document.getElementsByClassName(prefix + "Button");
-  for (i = 0; i < buttons.length; i++) {
-    buttons[i].className = buttons[i].className.replace(" clickedButton", "");
+  if (origIndex >= 0) {
+    buttons[origIndex].classList.remove("clickedButton");
   }
-  buttons[indexes[prefix]].className += " clickedButton";
+  buttons[indexes[prefix]].classList.add("clickedButton");
 }
 
-for (var section in indexes) {
-  showSlide(section, 0);
+function resetSlides() {
+  // show first slide for every section
+  for (let section in indexes) {
+    showSlide(section, 0);
+  }
 }
+
+resetSlides();
