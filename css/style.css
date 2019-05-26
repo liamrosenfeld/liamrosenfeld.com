@@ -66,27 +66,36 @@ p {
   padding: 25px;
 }
 
-.text {
+.description {
   display: inline-block;
   padding: 20px;
   vertical-align:top;
 }
 
 .actionImage {
+  object-fit: contain;
   padding: 1vh;
 }
 
 .mainImage {
-    display: inline-block;
-    object-fit: contain;
-    padding: 20px;
-    vertical-align:top;
-  }
+  display: inline-block;
+  object-fit: contain;
+  padding: 20px;
+  vertical-align:top;
+}
+
+.appSection, .musicSection {
+  background-color: #dddddd
+}
+
+.randomSection {
+  background-color: #bbbbbb
+}
 
 @media all and (min-width: 1325px) {
   /* CSS rules here for screens above 1325 px */
   .mainImage {
-    height: auto;
+    width: 40%;
     max-height: 30vh;
   }
 
@@ -95,12 +104,16 @@ p {
     height: auto;
   }
 
-  .content p {
+  .description {
+    width: 40vw;
+  }
+
+  .description p {
     width: 40vw
   }
 
   .content {
-    height: 40vh;
+    min-height: 40vh;
     padding-bottom: 1vh;
   }
 }
@@ -113,13 +126,17 @@ p {
   }
 
   .actionImage {
-    max-height: 5vh;
-    width: 70%;
+    max-height: 2.5vh;
+    max-width: 50%;
     height: auto;
   }
 
+  .description {
+    width: 80vw;
+  }
+
   .content {
-    height: calc(50vh + 35vw);
+    min-height: calc(55vh + 35vw);
     padding-bottom: 1vh;
   }
 
@@ -173,7 +190,7 @@ footer p {
   padding-bottom: 0.5vh;
 }
 
-footer .text {
+footer .description {
   padding-top: 2.5vh;
   margin: 0 auto;
 }
