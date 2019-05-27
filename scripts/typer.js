@@ -26,7 +26,7 @@ const Typer = class {
     }
 
     // Call Again After Delay
-    var myself = this;
+    const myself = this;
     if (this.typing) {
       setTimeout(function() {
         myself.doTyping();
@@ -41,7 +41,7 @@ function TyperSetup() {
   const elements = document.getElementsByClassName("typer");
 
   // Create Instances and Start
-  var typers = {};
+  let typers = {};
   for (let e of elements) {
     typers[e.id] = new Typer(e);
     typers[e.id].doTyping();
