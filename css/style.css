@@ -17,6 +17,7 @@
 /* General Fonts*/
 h1 {
   font-family: SFMono-Regular, "Roboto Mono", Menlo, monospace;
+  color: white;
   text-align: center;
   position: relative;
   font-size: calc(20px + 3vw);

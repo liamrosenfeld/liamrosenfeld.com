@@ -6,7 +6,6 @@ const Typer = class {
     // Constants
     this.words = element.innerHTML;
     this.delay = 60;
-    this.element.style.color = "white";
 
     // Counters
     this.char = 0;
