@@ -1,4 +1,4 @@
-let indexes = { "app": -1, "experimental": -1 };
+let indexes = { "app": -1, "academic": -1, "comical": -1 };
 
 function showSlide(prefix, index) {
   // get slides

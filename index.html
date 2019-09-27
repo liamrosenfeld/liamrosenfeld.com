@@ -12,164 +12,200 @@ For easier viewing, check out the full repository here:
 https://github.com/liamrosenfeld/liamrosenfeld.github.io
 -->
 <html lang="en">
-  <head>
-    <!--Meta Goodies-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Liam Rosenfeld dot com</title>
-    <meta name="author" content="Liam Rosenfeld">
-    <meta name="description" content="Liam Rosenfeld's Website">
 
-    <!--Style Sheets-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<head>
+  <!--Meta Goodies-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Liam Rosenfeld dot com</title>
+  <meta name="author" content="Liam Rosenfeld">
+  <meta name="description" content="Liam Rosenfeld's Website">
 
-  </head>
+  <!--Style Sheets-->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 
-  <body>
-    <!--Top Section-->
-    <div class="top">
-        <h1>
-          <span class="typer" id="main">Hello, I'm Liam Rosenfeld! I Make Things. (including this site)</span>
-        </h1>
-    </div>
+</head>
 
-    <!--App Section-->
-    <div class="contentSection appSection">
-      <h2>Apps</h2>
+<body>
+  <!--Top Section-->
+  <div class="top">
+    <h1>
+      <span class="typer" id="main">Hello, I'm Liam Rosenfeld! I Make Things. (including this site)</span>
+    </h1>
+  </div>
 
-      <div class="content">
+  <!--Full App Section-->
+  <div class="contentSection appSection">
+    <h2>Full Apps</h2>
 
-        <div class="appSlides">
-          <img class="mainImage" src="./img/mine/ascii.png" alt="ASCII Art Preview"></img>
-          <div class="description">
-            <h3>Image to ASCII Art</h3>
-            <p class="itemDescription">An iOS app that can turn any image into ASCII art.</p>
-            <a href="https://itunes.apple.com/us/app/image-to-ascii-art/id1329402459" target="_blank">
-              <img class="actionImage" src="./img/brand/appStore.svg" alt="Download on the App Store">
-            </a> <br/>
-            <a href="https://github.com/liamrosenfeld/Image-to-Ascii-Art" target="_blank">
-              <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
-            </a>
-          </div>
-        </div>
+    <div class="content">
 
-        <div class="appSlides">
-          <img class="mainImage" src="./img/mine/iconology.png" alt="Iconology Logo"></img>
-          <div class="description">
-            <h3>Iconology</h3>
-            <p class="itemDescription">I got tired of manually exporting every Xcode icon size, so I made a mac app to do it.</p>
-            <a href="https://github.com/liamrosenfeld/Iconology" target="_blank">
-              <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="buttons">
-        <button class="appButton" onclick="showSlide('app', 0)">1</button>
-        <button class="appButton" onclick="showSlide('app', 1)">2</button>
-      </div>
-
-    </div>
-
-    <!--Experimental Section-->
-    <div class="contentSection experimentalSection">
-        <h2>Experimental</h2>
-  
-        <div class="content">
-
-          <div class="experimentalSlides">
-              <img class="mainImage" src="./img/mine/fourier.png" alt="Swift Logo Drawn from Trig Functions"></img>
-              <div class="description">
-                <h3>Fourier Artist</h3>
-                <p class="itemDescription">My accepted 2019 WWDC Scholarship Application. It generates the equation for a path (stored as a JSON array of points) and then displays it using orbiting epicycles. The Fourier Transform and a description of the math can be found on the first page.</p>
-
-                <a href="https://github.com/liamrosenfeld/FourierArtist" target="_blank">
-                  <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
-                </a>
-              </div>
-            </div>
-
-          <div class="experimentalSlides">
-            <img class="mainImage" src="./img/mine/animalFarm.png" alt="ASCII Art of Sign Bunny"></img>
-            <div class="description">
-              <h3>Animal Farm</h3>
-              <p class="itemDescription">A Discord bot that sends custom animal ASCII art messages.</p>
-
-              <a href="https://discordbots.org/bot/511688790994059267" target="_blank">
-                <img class="actionImage" src="./img/brand/discord.svg" alt="View Bot Page">
-              </a><br/>
-              <a href="https://github.com/liamrosenfeld/AnimalFarmBot" target="_blank">
-                <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
-              </a>
-            </div>
-          </div>
-
-          <div class="experimentalSlides">
-            <img class="mainImage" src="./img/mine/porgify.png" alt="Porgify Logo"></img>
-            <div class="description">
-              <h3>Porgify</h3>
-              <p class="itemDescription">Porgify is a chrome extension that turns all images into Porgs. Created during the year 'The Force Awakens' came out, it was my first foray into the world of open source.</p>
-              
-              <a href="https://chrome.google.com/webstore/detail/porgify/anohiacdcfnoceaialpnnbbdcecamfkl" target="_blank">
-                <img class="actionImage" src="./img/brand/chrome.svg" alt="View on Chrome Web Store">
-              </a> <br/>
-              <a href="https://github.com/liamrosenfeld/Porgify" target="_blank">
-                <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
-              </a>
-            </div>
-          </div>
-  
-        </div>
-  
-        <div class="buttons">
-          <button class="experimentalButton" onclick="showSlide('experimental', 0)">1</button>
-          <button class="experimentalButton" onclick="showSlide('experimental', 1)">2</button>
-          <button class="experimentalButton" onclick="showSlide('experimental', 2)">3</button>
-        </div>
-  
-      </div>
-
-    <!--Music Section-->
-    <div class="contentSection musicSection">
-      <h2>Music</h2>
-      <div class="content">
-        <img class="mainImage" src="./img/mine/musical.png" alt="Youtube Channel Logo"></img>
+      <div class="appSlides">
+        <img class="mainImage" src="./img/mine/ascii.png" alt="ASCII Art Preview"></img>
         <div class="description">
-          <h3>Musical Extravaganza</h3>
-          <p class="itemDescription">A YouTube channel with arrangements of popular songs, all by ear. All the sheet music is available for free.</p>
-          <a href="https://www.youtube.com/musicalextravaganza" target="_blank">
-            <img class="actionImage" src="./img/brand/youtube.svg" alt="View on YouTube">
+          <h3>Image to ASCII Art</h3>
+          <p class="itemDescription">My first iOS app. It can turn any image into a representation fully constructed of ASCII characters.</p>
+          <a href="https://itunes.apple.com/us/app/image-to-ascii-art/id1329402459" target="_blank">
+            <img class="actionImage" src="./img/brand/appStore.svg" alt="Download on the App Store">
+          </a> <br />
+          <a href="https://github.com/liamrosenfeld/Image-to-Ascii-Art" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
           </a>
         </div>
       </div>
+
+      <div class="appSlides">
+        <img class="mainImage" src="./img/mine/iconology.png" alt="Iconology Logo"></img>
+        <div class="description">
+          <h3>Iconology</h3>
+          <p class="itemDescription">I got tired of manually exporting every Xcode icon size, so I made a mac app to do
+            it.</p>
+          <a href="https://github.com/liamrosenfeld/Iconology" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <!--Scripts-->
-    <script type="text/javascript" src="./scripts/buttons.js"></script>
-    <script type="text/javascript" src="./scripts/typer.js"></script>
+    <div class="buttons">
+      <button class="appButton button" onclick="showSlide('app', 0)">1</button>
+      <button class="appButton button" onclick="showSlide('app', 1)">2</button>
+    </div>
 
-  </body>
+  </div>
 
-  <footer>
-        <p>‹ › with ♥ by Liam</p>
-        
-        <div class="socialLinks">
-            <a href="https://github.com/liamrosenfeld" target="_blank">
-              <img class="actionImage" src="./img/brand/githubMark.svg" alt="View my GitHub">
-            </a>
-            <a href="https://twitter.com/liamrosenfeld" target="_blank">
-              <img class="actionImage" src="./img/brand/twitter.svg" alt="View my Twitter">
-            </a>
+  <!--Academic Section-->
+  <div class="contentSection academicSection">
+    <h2>Academic Projects</h2>
+
+    <div class="content">
+
+      <div class="academicSlides">
+        <img class="mainImage" src="./img/mine/fourier.png" alt="Swift Logo Drawn from Trig Functions"></img>
+        <div class="description">
+          <h3>Fourier Artist</h3>
+          <p class="itemDescription">My accepted 2019 WWDC Scholarship Application. It generates the equation for a path
+            (stored as a JSON array of points) and then displays it using orbiting epicycles. The Fourier Transform and
+            a description of the math can be found on the first page.</p>
+
+          <a href="https://github.com/liamrosenfeld/FourierArtist" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
+          </a>
         </div>
+      </div>
 
-        <div class="privacy">
-          <p>Privacy Policy</p>
-          <span class="tooltiptext">This site doesn't track you in any way, shape, or form. Period</span>
+      <div class="academicSlides">
+        <img class="mainImage" src="./img/mine/tonnetz.png" alt="Tonnetz"></img>
+        <div class="description">
+          <h3>Tonnetz</h3>
+          <p class="itemDescription">My entry for the REPL.it music hackathon. It visualizes the Tonnetz, a mapping of
+            tonal space which plays a crucial part in Neo-Riemannian theory.</p>
+
+          <a href="https://tonnetz.liamrosenfeld.com" target="_blank">
+            <p>View Site</p>
+          </a><br />
+          <a href="https://github.com/liamrosenfeld/Tonnetz" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
+          </a>
         </div>
-  </footer>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+      <button class="academicButton button" onclick="showSlide('academic', 0)">1</button>
+      <button class="academicButton button" onclick="showSlide('academic', 1)">2</button>
+    </div>
+
+  </div>
+
+  <!--Comical Section-->
+  <div class="contentSection comicalSection">
+    <h2>Comical Projects</h2>
+
+    <div class="content">
+
+      <div class="comicalSlides">
+        <img class="mainImage" src="./img/mine/animalFarm.png" alt="ASCII Art of Sign Bunny"></img>
+        <div class="description">
+          <h3>Animal Farm</h3>
+          <p class="itemDescription">A Discord bot that sends custom animal ASCII art messages.</p>
+
+          <a href="https://discordbots.org/bot/511688790994059267" target="_blank">
+            <img class="actionImage" src="./img/brand/discord.svg" alt="View Bot Page">
+          </a><br />
+          <a href="https://github.com/liamrosenfeld/AnimalFarmBot" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <div class="comicalSlides">
+        <img class="mainImage" src="./img/mine/porgify.png" alt="Porgify Logo"></img>
+        <div class="description">
+          <h3>Porgify</h3>
+          <p class="itemDescription">Porgify is a chrome extension that turns all images into Porgs. Created during the
+            year 'The Force Awakens' came out, it was my first foray into the world of open source.</p>
+
+          <a href="https://chrome.google.com/webstore/detail/porgify/anohiacdcfnoceaialpnnbbdcecamfkl" target="_blank">
+            <img class="actionImage" src="./img/brand/chrome.svg" alt="View on Chrome Web Store">
+          </a> <br />
+          <a href="https://github.com/liamrosenfeld/Porgify" target="_blank">
+            <img class="actionImage" src="./img/brand/github.svg" alt="View on GitHub">
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+      <button class="comicalButton button" onclick="showSlide('comical', 0)">1</button>
+      <button class="comicalButton button" onclick="showSlide('comical', 1)">2</button>
+    </div>
+
+  </div>
+
+  <!--Music Section-->
+  <div class="contentSection musicSection">
+    <h2>Music</h2>
+    <div class="content">
+      <img class="mainImage" src="./img/mine/musical.png" alt="Youtube Channel Logo"></img>
+      <div class="description">
+        <h3>Musical Extravaganza</h3>
+        <p class="itemDescription">A YouTube channel with arrangements of popular songs, all by ear. All the sheet music
+          is available for free.</p>
+        <a href="https://www.youtube.com/musicalextravaganza" target="_blank">
+          <img class="actionImage" src="./img/brand/youtube.svg" alt="View on YouTube">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!--Scripts-->
+  <script type="text/javascript" src="./scripts/buttons.js"></script>
+  <script type="text/javascript" src="./scripts/typer.js"></script>
+
+</body>
+
+<footer>
+  <p>‹ › with ♥ by Liam</p>
+
+  <div class="socialLinks">
+    <a href="https://github.com/liamrosenfeld" target="_blank">
+      <img src="./img/brand/githubMark.svg" alt="View my GitHub">
+    </a>
+    <a href="https://twitter.com/liamrosenfeld" target="_blank">
+      <img src="./img/brand/twitter.svg" alt="View my Twitter">
+    </a>
+  </div>
+
+  <div class="privacy">
+    <p>Privacy Policy</p>
+    <span class="tooltiptext">This site doesn't track you in any way, shape, or form. Period</span>
+  </div>
+</footer>
 
 </html>
