@@ -1,0 +1,11 @@
+title: Liam Rosenfeld dot com
+exclude:
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - CNAME
+  - README.md
