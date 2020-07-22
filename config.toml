@@ -1,0 +1,44 @@
+# default configuration
+baseURL = "https://www.liamrosenfeld.com"
+summaryLength = "10"
+title = "Liam Rosenfeld"
+
+# menu
+[[menu.main]]
+URL = "projects"
+name = "Projects"
+weight = 2
+
+[[menu.main]]
+URL = "blog"
+name = "Blog"
+weight = 3
+
+# default parameters
+[params]
+home = "Home"
+logo = ""
+# theme color
+theme_color = "#41228e"
+# contact info
+email = "me@liamrosenfeld.com"
+# meta description
+author = "Liam Rosenfeld"
+description = "Liam Rosenfeld's Website."
+copyright = "&copy; 2020 Liam Rosenfeld"
+
+# preloader
+[params.preloader]
+enable = true
+preloader = "images/preloader.gif" # use png, jpg, svg or gif format
+
+# social sites
+[[params.social]]
+name = "twitter"
+icon = "twitter.svg"
+URL = "https://twitter.com/liamrosenfeld"
+
+[[params.social]]
+name = "github"
+icon = "github.svg"
+URL = "https://github.com/liamrosenfeld"

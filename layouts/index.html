@@ -1,0 +1,100 @@
+{{ define "main" }}
+
+<!-- title area -->
+<section class="hero-area bg-primary overflow-hidden">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <h1 class="text-white font-tertiary">
+          {{ site.Data.homepage.banner.title | safeHTML }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- social icon -->
+  <ul class="list-unstyled ml-5 mt-3 position-relative zindex-1">
+    {{ range site.Params.social }}
+    <li class="mb-3">
+      <a class="text-white" href="{{.URL | safeURL }}">
+        {{ $path:= (print "images/icons/" .icon)}}
+        <img
+          src="{{ $path | absURL }}"
+          alt="{{ .name }}"
+        />
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+  <!-- /social icon -->
+</section>
+<!-- /title area -->
+
+<!-- about -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        {{ with site.Data.homepage.about }}
+        <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
+        {{ if .button.enable }} {{ with .button }}
+        <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
+        {{ end }} {{ end }} {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- projects -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">
+          Recent Projects
+        </h2>
+      </div>
+    </div>
+    <div class="row shuffle-wrapper">
+      {{ $count:= site.Data.homepage.projects.display_count }}
+      {{ range first $count (where .Site.RegularPages "Section" "projects") }}
+      <div class="col-lg-4 col-6 mb-4 shuffle-item">
+        <div class="position-relative rounded hover-wrapper">
+          <img
+            src="{{.Params.image | absURL }}"
+            alt="projects-image"
+            class="img-fluid rounded w-100 d-block"
+          />
+          <div class="hover-overlay">
+            <div class="hover-content">
+              <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">
+                view project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /projects -->
+
+<!-- blog -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">
+          Latest Blog Posts
+        </h2>
+      </div>
+      {{ $count:= site.Data.homepage.projects.display_count }}
+      {{ range first $count site.RegularPages }} {{ .Render "post" }} {{ end }}
+    </div>
+  </div>
+</section>
+<!-- /blog -->
+
+{{end}}

@@ -1,0 +1,17 @@
+# banner
+banner:
+  title: "Hi! I’m Liam!"
+
+# about
+about:
+  content: "I'm a high school student with a passion for development, music, and making things. I primarily work in Swift, and received a WWDC19 Scholarship.."
+
+# projects
+projects:
+  display_count: 5
+  # comes from 'content/projects' folder.
+
+# blog
+blog:
+  display_count: 5
+  # comes from "content/blog" folder
