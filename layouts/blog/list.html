@@ -1,17 +1,75 @@
 {{ define "main" }}
 
-  {{ partial "page-title.html" . }}
+{{ partial "page-title.html" . }}
 
-  <!-- blog -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        {{ range .Data.Pages }}
-        {{ .Render "post" }}
-        {{ end }}
+<section class="section">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="btn-group btn-group-toggle justify-content-center d-flex flex-wrap" data-toggle="buttons">
+          <label class="btn btn-sm btn-primary active">
+            <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>All
+          </label>
+					{{ $tags := slice }}
+					{{ range .Data.Pages }}
+					{{ range .Params.tags }}
+					{{ $tags = $tags | append . }}
+					{{ end }}
+					{{ end }}
+					{{ range ( $tags | uniq ) }}
+          <label class="btn btn-sm btn-primary">
+            {{ $value:= . | urlize }}
+            <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>{{ . | humanize }}
+          </label>
+          {{ end }}
+        </div>
       </div>
     </div>
-  </section>
-  <!-- /blog -->
+    <div class="row" id="shuffle-wrapper">
+      {{ range .Data.Pages }}
+      {{ .Render "post" }}
+      {{ end }}
+    </div>
+  </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
+    integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    var containerEl = document.getElementById("shuffle-wrapper");
+    if (!containerEl) {
+      console.error("shuffle-wrapper does not exist")
+    }
+
+    var Shuffle = window.Shuffle;
+    var myShuffle = new Shuffle(containerEl, {
+      itemSelector: '.shuffle-item',
+      buffer: 1
+    });
+    
+    let radioChanged = (radio) => {
+      if (radio.checked) {
+        myShuffle.filter(radio.value);
+      }
+    }
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get("tag");
+    let component;
+    if (param == null) {
+      component = document.getElementById("radio-all");
+    } else {
+      component = document.getElementById("radio-" + param);
+      if (component == null) {
+        component = document.getElementById("radio-all");
+      }
+    }
+    component.setAttribute("checked", "checked");
+    myShuffle.filter(param);
+  </script>
+</section>
 
 {{ end }}
