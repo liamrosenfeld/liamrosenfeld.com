@@ -11,13 +11,13 @@
           <label class="btn btn-sm btn-primary active">
             <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>All
           </label>
-					{{ $categories := slice }}
-					{{ range .Data.Pages }}
-					{{ range .Params.categories }}
-					{{ $categories = $categories | append . }}
-					{{ end }}
-					{{ end }}
-					{{ range ( $categories | uniq ) }}
+          {{ $categories := slice }}
+          {{ range .Data.Pages }}
+          {{ range .Params.categories }}
+          {{ $categories = $categories | append . }}
+          {{ end }}
+          {{ end }}
+          {{ range ( $categories | uniq ) }}
           <label class="btn btn-sm btn-primary">
             {{ $value:= . | urlize }}
             <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>{{ . | humanize }}
