@@ -24,11 +24,6 @@ description = "Liam Rosenfeld's Website."
 name = "Liam Rosenfeld"
 email = "me@liamrosenfeld.com"
 
-# preloader
-[params.preloader]
-enable = true
-preloader = "images/preloader.gif" # use png, jpg, svg or gif format
-
 # social sites
 [[params.social]]
 name = "twitter"
@@ -39,3 +34,8 @@ URL = "https://twitter.com/liamrosenfeld"
 name = "github"
 icon = "github.svg"
 URL = "https://github.com/liamrosenfeld"
+
+# Disable the default taxonomies
+[taxonomies]
+tag = ""
+category = ""

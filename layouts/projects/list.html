@@ -9,7 +9,7 @@
       <div class="col-12">
         <div class="btn-group btn-group-toggle justify-content-center d-flex flex-wrap" data-toggle="buttons">
           <label class="btn btn-sm btn-primary active">
-            <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
+            <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>All
           </label>
 					{{ $categories := slice }}
 					{{ range .Data.Pages }}
@@ -19,7 +19,8 @@
 					{{ end }}
 					{{ range ( $categories | uniq ) }}
           <label class="btn btn-sm btn-primary">
-            <input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . | humanize }}
+            {{ $value:= . | urlize }}
+            <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>{{ . | humanize }}
           </label>
           {{ end }}
         </div>
@@ -31,6 +32,45 @@
       {{ end }}
     </div>
   </div>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
+    integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
+    crossorigin="anonymous">
+  </script>
+
+  <script>
+    var containerEl = document.querySelector('.shuffle-wrapper');
+    if (!containerEl) {
+      console.error("shuffle-wrapper does nto exist")
+    }
+
+    var Shuffle = window.Shuffle;
+    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
+      itemSelector: '.shuffle-item',
+      buffer: 1
+    });
+    
+    let radioChanged = (radio) => {
+      if (radio.checked) {
+        myShuffle.filter(radio.value);
+      }
+    }
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const param = urlParams.get("category");
+    let component;
+    if (param == null) {
+      component = document.getElementById("radio-all");
+    } else {
+      component = document.getElementById("radio-" + param);
+      if (component == null) {
+        component = document.getElementById("radio-all");
+      }
+    }
+    component.setAttribute("checked", "checked");
+    myShuffle.filter(param);
+  </script>
 </section>
 <!-- /projects -->
 
