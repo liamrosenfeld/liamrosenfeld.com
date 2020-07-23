@@ -36,11 +36,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-10 mx-auto text-center">
-        {{ with site.Data.homepage.about }}
-        <p class="font-secondary lead text-dark">{{.content | markdownify}}</p>
-        {{ if .button.enable }} {{ with .button }}
-        <a href="{{ .URL | absURL }}" class="btn btn-transparent">{{.label}}</a>
-        {{ end }} {{ end }} {{ end }}
+        <p class="font-secondary lead text-dark">{{site.Data.homepage.about.content | markdownify}}</p>
       </div>
     </div>
   </div>
@@ -60,22 +56,7 @@
     <div class="row shuffle-wrapper">
       {{ $count:= site.Data.homepage.projects.display_count }}
       {{ range first $count (where .Site.RegularPages "Section" "projects") }}
-      <div class="col-lg-4 col-6 mb-4 shuffle-item">
-        <div class="position-relative rounded hover-wrapper">
-          <img
-            src="{{.Params.image | absURL }}"
-            alt="projects-image"
-            class="img-fluid rounded w-100 d-block"
-          />
-          <div class="hover-overlay">
-            <div class="hover-content">
-              <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">
-                view project
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{ .Render "post" }}
       {{ end }}
     </div>
   </div>
@@ -92,7 +73,9 @@
         </h2>
       </div>
       {{ $count:= site.Data.homepage.projects.display_count }}
-      {{ range first $count site.RegularPages }} {{ .Render "post" }} {{ end }}
+      {{ range first $count (where .Site.RegularPages "Section" "blog") }}
+      {{ .Render "post" }}
+      {{ end }}
     </div>
   </div>
 </section>

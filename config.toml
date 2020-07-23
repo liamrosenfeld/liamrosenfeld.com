@@ -17,7 +17,6 @@ weight = 3
 # default parameters
 [params]
 home = "Home"
-logo = ""
 description = "Liam Rosenfeld's Website."
 
 # author information

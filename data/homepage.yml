@@ -2,7 +2,7 @@ banner:
   title: "Hi! I’m Liam!"
 
 about:
-  content: "I'm a high school student with a passion for development, music, and making things. My favorite programming languages are Swift and Rust, though I primarily work in Swift (and occasionally web technologies—such as this site). I received an Apple WWDC19 Scholarship and won their WWDC20 Swift Student Challenge."
+  content: "I'm a high school student with a passion for development, music, and making things. I like exploring the crossroads of programing, math, and music wherever they may lie. My favorite programming languages are Swift and Rust, though I primarily work in Swift (and occasionally web technologies—such as this site). I received an Apple WWDC19 Scholarship and won their WWDC20 Swift Student Challenge."
 
 projects:
   display_count: 5
