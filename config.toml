@@ -18,7 +18,6 @@ weight = 3
 [params]
 home = "Home"
 logo = ""
-theme_color = "#41228e"
 description = "Liam Rosenfeld's Website."
 
 # author information
