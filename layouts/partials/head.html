@@ -11,9 +11,11 @@
     name="description"
     content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}"
   />
-  {{ with site.Params.author }}
+  {{ with site.Params.author.name }}
   <meta name="author" content="{{ . }}" />
-  {{ end }} {{ hugo.Generator }}
+  {{ end }}
+  
+  {{ hugo.Generator }}
 
   <style>
     :root{

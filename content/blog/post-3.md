@@ -2,7 +2,7 @@
 title: "Test Post 3"
 date: 2020-07-23
 draft: false
-tags: ["thoughts"]
+tags: ["thoughts", "swift"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore

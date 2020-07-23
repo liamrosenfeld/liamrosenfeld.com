@@ -2,13 +2,6 @@
 /public/
 /resources/_gen/
 
-### Sass ###
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-*.css
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json

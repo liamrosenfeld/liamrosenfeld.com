@@ -4,7 +4,15 @@
       <h4 class="card-title">
         <a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
       </h4>
+      <p>{{ .Date.Format "Jan 02, 2006" }}</p>
       <p class="cars-text">{{.Summary}}</p>
+      {{ if .Params.tags }}
+      <ul class="post-tags">
+          {{ range .Params.tags }}
+              <li><a href="{{ "tags/" | absLangURL }}{{ . | urlize }}">#{{ . }}</a></li>
+          {{ end }}
+      </ul>
+      {{ end }}
       <a href="{{.Permalink}}" class="btn btn-sm btn-primary">Read More</a>
     </div>
   </article>

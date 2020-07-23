@@ -2,7 +2,7 @@
 title: "Test Post 2"
 date: 2020-07-22
 draft: false
-tags: ["thoughts"]
+tags: ["thoughts", "coding"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore

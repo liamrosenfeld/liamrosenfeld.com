@@ -1,6 +1,6 @@
 ---
 title: "Short Time Fourier Explainer"
-date: 2019-05-18
+date: 2020-05-18
 image: "images/projects/stfourier-explainer.png"
 code_url: "https://github.com/liamrosenfeld/STFourierExplainer"
 categories: ["academic", "swift", "WWDC"]

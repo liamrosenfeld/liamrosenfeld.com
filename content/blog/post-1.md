@@ -2,7 +2,7 @@
 title: "Test Post 1"
 date: 2020-07-21
 draft: false
-tags: ["thoughts"]
+tags: ["thoughts", "education"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore

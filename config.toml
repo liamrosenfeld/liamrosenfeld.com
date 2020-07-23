@@ -18,14 +18,13 @@ weight = 3
 [params]
 home = "Home"
 logo = ""
-# theme color
 theme_color = "#41228e"
-# contact info
-email = "me@liamrosenfeld.com"
-# meta description
-author = "Liam Rosenfeld"
 description = "Liam Rosenfeld's Website."
-copyright = "&copy; 2020 Liam Rosenfeld"
+
+# author information
+[params.author]
+name = "Liam Rosenfeld"
+email = "me@liamrosenfeld.com"
 
 # preloader
 [params.preloader]
