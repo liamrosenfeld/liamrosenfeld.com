@@ -1,77 +1,54 @@
 {{ define "main" }}
 
 <!-- title area -->
-<section class="hero-area bg-primary overflow-hidden">
+<section id="main-title-area">
   <div class="container">
-    <div class="row">
-      <!-- Text-->
-      <div class="col-lg-11 mx-auto">
-        <h1 class="text-white font-tertiary">
-          {{ site.Data.homepage.banner.title | safeHTML }}
-        </h1>
-      </div>
-    </div>
+    <!-- Text-->
+    <h1>
+      {{ site.Data.homepage.banner.title | safeHTML }}
+    </h1>
 
     <!-- social icon -->
-    <ul class="list-inline position-relative zindex-1 col-lg-11 mx-auto">
+    <div id="social">
       {{ range site.Params.social }}
-      <li class="list-inline-item">
-        <a href="{{.URL | safeURL }}">
-          {{ $path:= (print "images/icons/" .icon)}}
-          <img
-            src="{{ $path | absURL }}"
-            alt="{{ .name }}"
-            style="height: 25px;"
-          />
-        </a>
-      </li>
+      <a href="{{.URL | safeURL }}">
+        {{ $path:= (print "images/icons/" .icon)}}
+        <img
+          src="{{ $path | absURL }}"
+          alt="{{ .name }}"
+        />
+      </a>
       {{ end }}
-      <li class="list-inline-item">
-        <a href="mailto:{{ site.Params.author.email }}">
-          <img
-            src="{{ `images/icons/mail.svg` | absURL }}"
-            alt="Email"
-            style="height: 25px;"
-          />
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a href="/blog/index.xml">
-          <img
-            src="{{ `images/icons/rss.svg` | absURL }}"
-            alt="RSS"
-            style="height: 25px;"
-          />
-        </a>
-      </li>
-    </ul>
+      <a href="mailto:{{ site.Params.author.email }}">
+        <img
+          src="{{ `images/icons/mail.svg` | absURL }}"
+          alt="Email"
+        />
+      </a>
+      <a href="/blog/index.xml">
+        <img
+          src="{{ `images/icons/rss.svg` | absURL }}"
+          alt="RSS"
+        />
+      </a>
   </div>
 </section>
 <!-- /title area -->
 
 <!-- about -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-10 mx-auto text-center">
-        <p class="font-secondary lead text-dark">{{site.Data.homepage.about.content | markdownify}}</p>
-      </div>
-    </div>
-  </div>
+<section id="about" class="section">
+  <p>{{site.Data.homepage.about.content | markdownify}}</p>
 </section>
 <!-- /about -->
 
 <!-- projects -->
 <section class="section">
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">
-          Recent Projects
-        </h2>
-      </div>
-    </div>
-    <div class="row shuffle-wrapper">
+    <h2>
+      Recent Projects
+    </h2>
+
+    <div class="gallery shuffle-wrapper">
       {{ $count:= site.Data.homepage.projects.display_count }}
       {{ range first $count (where .Site.RegularPages "Section" "projects") }}
       {{ .Render "post" }}
@@ -84,12 +61,11 @@
 <!-- blog -->
 <section class="section">
   <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h2 class="section-title">
-          Latest Blog Posts
-        </h2>
-      </div>
+    <h2>
+      Latest Blog Posts
+    </h2>
+
+    <div class="gallery shuffle-wrapper">
       {{ $count:= site.Data.homepage.projects.display_count }}
       {{ range first $count (where .Site.RegularPages "Section" "blog") }}
       {{ .Render "post" }}

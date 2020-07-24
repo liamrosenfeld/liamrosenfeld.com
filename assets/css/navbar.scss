@@ -1,0 +1,36 @@
+.navigation {
+  padding: 40px 130px;
+  transition: 0.3s ease;
+}
+
+.navigation.nav-bg {
+  background-color: $primary-color;
+  padding: 15px 100px;
+}
+
+@media (max-width: 991px) {
+  .navigation.nav-bg {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .navigation {
+    padding: 20px;
+    background: $primary-color;
+  }
+}
+
+.navbar .nav-item .nav-link {
+  font-family: roboto;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.navbar .nav-item.active .nav-link {
+  color: #52f8f4;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
