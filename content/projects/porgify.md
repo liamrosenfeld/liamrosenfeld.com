@@ -6,6 +6,7 @@ project_url: "https://chrome.google.com/webstore/detail/porgify/anohiacdcfnoceai
 code_url: "https://github.com/liamrosenfeld/Porgify"
 categories: ["comical", "web"]
 draft: false
+blurb: "A Chrome extension that turns all images into Porgs"
 ---
 
 Porgify is a chrome extension that turns all images into Porgs. Created during the year 'The Force Awakens' came out, it was my first foray into the world of open source.

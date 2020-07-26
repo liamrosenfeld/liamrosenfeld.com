@@ -2,18 +2,18 @@
   class="col-lg-4 col-6 mb-4 shuffle-item"
   data-groups='[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}"{{. | urlize}}"{{ end }}]'
 >
-  <article class="position-relative rounded hover-wrapper">
+  <article class="card shadow">
     <img
-      src="{{.Params.image | absURL }}"
+      class="rounded card-img-top"
+      src="{{.Params.Image | relURL}}"
       alt="projects-image"
-      class="img-fluid rounded w-100 d-block"
     />
-    <div class="hover-overlay">
-      <div class="hover-content">
-        <a class="btn btn-light btn-sm" href="{{ .Permalink | safeURL }}">
-          view project
-        </a>
-      </div>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a class="text-dark" href="{{.Permalink}}">{{.Title }}</a>
+      </h4>
+      <p class="cars-text">{{.Params.blurb}}</p>
+      <a href="{{.Permalink}}" class="btn btn-sm btn-primary">View</a>
     </div>
   </article>
 </div>

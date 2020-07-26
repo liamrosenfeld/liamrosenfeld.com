@@ -5,6 +5,7 @@ image: "images/projects/fourier-artist.png"
 code_url: "https://github.com/liamrosenfeld/FourierArtist"
 categories: ["academic", "swift", "WWDC"]
 draft: false
+blurb: "My accepted WWDC19 Scholarship Application"
 ---
 
-My accepted WWDC20 Swift Student Challenge submission. It guides you along the creation of multiple live views that all utilize the Short Time Fast Fourier Transform and its inverse. The goal of the playground is to guide the user along a path of learning in the fields of both programming and digital signal processing.
+My accepted WWDC19 Scholarship Application. It generates the equation for a path (stored as a JSON array of points) and then displays it using orbiting epicycles. The Fourier Transform and a description of the math can be found on the first page.
