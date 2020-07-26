@@ -12,7 +12,7 @@
       {{ if .Params.tags }}
       <ul class="post-tags">
           {{ range .Params.tags }}
-            <li><a href="/blog/?{{ querify "tag" . | safeURL }}">#{{ . }}</a></li>
+            <li><a href="/posts/?{{ querify "tag" . | safeURL }}">#{{ . }}</a></li>
           {{ end }}
       </ul>
       {{ end }}

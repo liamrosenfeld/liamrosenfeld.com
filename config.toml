@@ -15,8 +15,8 @@ URL = "/projects/"
 weight = 2
 
 [[menu.main]]
-name = "Blog"
-URL = "/blog/"
+name = "Posts"
+URL = "/posts/"
 weight = 3
 
 # default parameters

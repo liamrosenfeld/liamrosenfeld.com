@@ -25,7 +25,7 @@
           alt="Email"
         />
       </a>
-      <a href="/blog/index.xml">
+      <a href="/posts/index.xml">
         <img
           src="{{ `images/icons/rss.svg` | absURL }}"
           alt="RSS"
@@ -33,13 +33,11 @@
       </a>
   </div>
 </section>
-<!-- /title area -->
 
 <!-- about -->
 <section id="about" class="section">
   <p>{{site.Data.homepage.about.content | markdownify}}</p>
 </section>
-<!-- /about -->
 
 <!-- projects -->
 <section class="section">
@@ -56,23 +54,21 @@
     </div>
   </div>
 </section>
-<!-- /projects -->
 
-<!-- blog -->
+<!-- posts -->
 <section class="section">
   <div class="container">
     <h2>
-      Latest Blog Posts
+      Latest Posts
     </h2>
 
     <div class="gallery shuffle-wrapper">
-      {{ $count:= site.Data.homepage.blog.display_count }}
-      {{ range first $count (where .Site.RegularPages "Section" "blog") }}
+      {{ $count:= site.Data.homepage.posts.display_count }}
+      {{ range first $count (where .Site.RegularPages "Section" "posts") }}
       {{ .Render "post" }}
       {{ end }}
     </div>
   </div>
 </section>
-<!-- /blog -->
 
 {{end}}
