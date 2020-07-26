@@ -1,0 +1,14 @@
+<article
+  class="preview-card shuffle-item"
+  data-groups='[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}"{{. | urlize}}"{{ end }}]'
+>
+  <img
+    src="{{.Params.Image | relURL}}"
+    alt="project-image"
+  />
+  <div class="body">
+    <h4>{{.Title }}</h4>
+    <p>{{.Params.blurb}}</p>
+    <a href="{{.Permalink}}" class="button">View</a>
+  </div>
+</article>
