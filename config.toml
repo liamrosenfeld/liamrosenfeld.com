@@ -5,13 +5,18 @@ title = "Liam Rosenfeld"
 
 # menu
 [[menu.main]]
-URL = "projects"
+name = "Home"
+URL = "/"
+weight = 1
+
+[[menu.main]]
 name = "Projects"
+URL = "/projects/"
 weight = 2
 
 [[menu.main]]
-URL = "blog"
 name = "Blog"
+URL = "/blog/"
 weight = 3
 
 # default parameters

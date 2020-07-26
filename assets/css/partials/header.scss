@@ -1,36 +1,110 @@
-.navigation {
-  padding: 40px 130px;
+#navbar {
+  $nav-mobile-size: 800px;
+
+  // text size
+  font-size: 18px;
+
+  // fix on top of screen
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+
+  // text position
+  padding: 50px;
   transition: 0.3s ease;
-}
 
-.navigation.nav-bg {
-  background-color: $primary-color;
-  padding: 15px 100px;
-}
-
-@media (max-width: 991px) {
-  .navigation.nav-bg {
-    padding: 15px 20px;
-  }
-}
-
-@media (max-width: 991px) {
-  .navigation {
-    padding: 20px;
+  @media (max-width: $nav-mobile-size) {
+    padding: 30px;
     background: $primary-color;
   }
-}
 
-.navbar .nav-item .nav-link {
-  font-family: roboto;
-  text-transform: uppercase;
-  padding: 15px;
-}
+  // when scrolled
+  &.scrolled {
+    background-color: $primary-color;
+    padding: 40px;
+  }
 
-.navbar .nav-item.active .nav-link {
-  color: $accent-color;
-}
+  @media (max-width: $nav-mobile-size) {
+    &.scrolled {
+      padding: 30px;
+    }
+  }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+  // link style
+  .mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: sp;
+  }
+  
+  #nav-links {
+    flex-direction: column;
+    display: none;
+  
+    &.active {
+      display: flex;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      margin: 5px auto;
+
+      &.current {
+        color: $accent-color;
+      }
+    }
+
+  }
+  
+  .title {
+    font-size: 22px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  #navbar-toggle {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 24px;
+    user-select: none;
+  }
+  
+  @media (min-width: $nav-mobile-size) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+
+    .mobile-top {
+      width: auto;
+    }
+  
+    #nav-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .nav-link {
+        margin: 0;
+        margin-right: 15px;
+
+        &:hover {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  
+    #navbar-toggle {
+      display: none;
+    }
+  
+    .title:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
 }

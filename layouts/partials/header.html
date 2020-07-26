@@ -1,40 +1,29 @@
-<header class="navigation fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="{{ site.BaseURL }}">
-      <h3 class="text-white font-tertiary">{{site.Title}}</h3>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse text-center" id="navigation">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.BaseURL }}">{{ with site.Params.Home }} {{ . }} {{ end }}</a>
-        </li>
-        {{ $current := . }}
-        {{ range site.Menus.main }}
-        {{ $active := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
-        {{ $active = or $active (eq .Name $current.Title) }}
-        {{ if .HasChildren }}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ .Name }}
-          </a>
-          <div class="dropdown-menu" >
-            {{ range .Children }}
-            <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
-            {{ end }}
-          </div>
-        </li>
-        {{ else }}
-        <li class="nav-item {{ if $active }}active{{ end }}">
-          <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
-        </li>
-        {{ end }}
-        {{ end }}
-      </ul>
+<header>
+  <nav id="navbar">
+    <div class="mobile-top">
+      <a href="{{ site.BaseURL }}" class="title">{{site.Title}}</a>
+      <span id="navbar-toggle">
+        ☰
+      </span>
     </div>
+    
+    <span id="nav-links">
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+      {{ $is_current := or ($current.IsMenuCurrent "nav" .) ($current.HasMenuCurrent "nav" .) }}
+      {{ $is_current = or $is_current (eq .Name $current.Title) }}
+      <a class="nav-link {{ if $is_current }}current{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a>
+      {{ end }}
+    </span>
   </nav>
+
+  <script>
+    let mainNav = document.getElementById("nav-links");
+    let navBarToggle = document.getElementById("navbar-toggle");
+
+    navBarToggle.addEventListener("click", () => {
+      console.log("here");
+      mainNav.classList.toggle("active");
+    });
+  </script>
 </header>
