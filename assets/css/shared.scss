@@ -11,13 +11,13 @@ body {
   font-family: roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 15px;
-  color: #4c4c4c;
+  color: $body-text-color;
 }
 
 p {
   font-weight: 400;
-  color: #4c4c4c;
-  font-size: 15px;
+  color: $body-text-color;
+  font-size: 16px;
   line-height: 1.8;
   font-family: roboto, sans-serif;
 }
@@ -75,4 +75,18 @@ h5,
 h6,
 .h6 {
   font-size: 14px;
+}
+
+blockquote {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #eaeaea;
+  border-left: 2px solid $primary-color;
+  font-style: italic;
+  font-size: 22px;
+}
+
+::selection {
+  background: $accent-color;
+  color: #fff;
 }

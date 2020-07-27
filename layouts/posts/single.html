@@ -2,17 +2,16 @@
 
   {{ partial "page-title.html" . }}
 
-  <section class="section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="content">
-            {{.Content }}
-          </div>
-        </div>
-        <div class="col-lg-9 text-center mb-4">
-          <p class="font-secondary">Published on {{ .PublishDate.Format "Jan 02, 2006" }}</p>
-        </div>
+  <section id="post-page">
+    <div class="content">
+      {{.Content }}
+      <div>
+        <p>Published on {{ .PublishDate.Format "Jan 02, 2006" }}</p>
+      </div>
+      <div class="tags">
+        {{ range .Params.tags }}
+          <a href="/posts/?{{ querify "tag" . | safeURL }}">#{{ . }}</a>
+        {{ end }}
       </div>
     </div>
   </section>
