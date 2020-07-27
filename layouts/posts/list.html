@@ -4,28 +4,27 @@
 
 <section class="section">
   <div class="container">
-    <div class="row mb-5">
-      <div class="col-12">
-        <div class="btn-group btn-group-toggle justify-content-center d-flex flex-wrap" data-toggle="buttons">
-          <label class="btn btn-sm btn-primary active">
-            <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>All
-          </label>
-          {{ $tags := slice }}
-          {{ range .Data.Pages }}
-          {{ range .Params.tags }}
-          {{ $tags = $tags | append . }}
-          {{ end }}
-          {{ end }}
-          {{ range ( $tags | uniq ) }}
-          <label class="btn btn-sm btn-primary">
-            {{ $value:= . | urlize }}
-            <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>{{ . | humanize }}
-          </label>
-          {{ end }}
-        </div>
-      </div>
+    <div class="segmented-input">
+      <span class="option">
+        <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>
+        <label for="radio-all">All</label>
+      </span>
+      
+      {{ $tags := slice }}
+      {{ range .Data.Pages }}
+      {{ range .Params.tags }}
+      {{ $tags = $tags | append . }}
+      {{ end }}
+      {{ end }}
+      {{ range ( $tags | uniq ) }}
+      {{ $value:= . | urlize }}
+      <span class="option">
+        <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>
+        <label for="radio-{{ $value }}">{{ . | humanize }}</label>
+      </span>
+      {{ end }}
     </div>
-    <div class="row" id="shuffle-wrapper">
+    <div id="shuffle-wrapper">
       {{ range .Data.Pages }}
       {{ .Render "preview" }}
       {{ end }}
@@ -46,7 +45,8 @@
 
     var Shuffle = window.Shuffle;
     var myShuffle = new Shuffle(containerEl, {
-      itemSelector: '.shuffle-item',
+      itemSelector: ".shuffle-item",
+      isCentered: true,
       buffer: 1
     });
     

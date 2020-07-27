@@ -5,28 +5,26 @@
 <!-- projects -->
 <section class="section">
   <div class="container">
-    <div class="row mb-5">
-      <div class="col-12">
-        <div class="btn-group btn-group-toggle justify-content-center d-flex flex-wrap" data-toggle="buttons">
-          <label class="btn btn-sm btn-primary active">
-            <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>All
-          </label>
-          {{ $categories := slice }}
-          {{ range .Data.Pages }}
-          {{ range .Params.categories }}
-          {{ $categories = $categories | append . }}
-          {{ end }}
-          {{ end }}
-          {{ range ( $categories | uniq ) }}
-          <label class="btn btn-sm btn-primary">
-            {{ $value:= . | urlize }}
-            <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>{{ . | humanize }}
-          </label>
-          {{ end }}
-        </div>
-      </div>
+    <div class="segmented-input">
+      <span class="option">
+        <input type="radio" id="radio-all" name="shuffle-filter" value="all" onchange="radioChanged(this)"/>
+        <label for="radio-all">All</label>
+      </span>
+      {{ $categories := slice }}
+      {{ range .Data.Pages }}
+      {{ range .Params.categories }}
+      {{ $categories = $categories | append . }}
+      {{ end }}
+      {{ end }}
+      {{ range ( $categories | uniq ) }}
+      {{ $value:= . | urlize }}
+      <span class="option">
+        <input type="radio" id="radio-{{ $value }}" name="shuffle-filter" value="{{ $value }}" onchange="radioChanged(this)"/>
+        <label for="radio-{{ $value }}">{{ . | humanize }}</label>
+      </span>
+      {{ end }}
     </div>
-    <div class="row shuffle-wrapper">
+    <div id="shuffle-wrapper">
       {{ range .Data.Pages }}
       {{ .Render "preview" }}
       {{ end }}
@@ -40,14 +38,15 @@
   </script>
 
   <script>
-    var containerEl = document.querySelector('.shuffle-wrapper');
+    var containerEl = document.getElementById("shuffle-wrapper");
     if (!containerEl) {
-      console.error("shuffle-wrapper does nto exist")
+      console.error("shuffle-wrapper does not exist")
     }
 
     var Shuffle = window.Shuffle;
-    var myShuffle = new Shuffle(document.querySelector('.shuffle-wrapper'), {
-      itemSelector: '.shuffle-item',
+    var myShuffle = new Shuffle(document.getElementById("shuffle-wrapper"), {
+      itemSelector: ".shuffle-item",
+      isCentered: true,
       buffer: 1
     });
     

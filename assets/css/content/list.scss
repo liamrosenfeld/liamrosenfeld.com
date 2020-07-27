@@ -1,0 +1,41 @@
+.segmented-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: $accent-color;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .option {
+    flex-grow: 1;
+
+    label {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      font-size: 15px;
+      padding: 15px;
+      font-family: roboto, sans-serif;
+      text-transform: capitalize;
+      font-weight: 600;
+      border: 0;
+      position: relative;
+      z-index: 1;
+      transition: 0.2s ease;
+      background-color: $accent-color;
+      color: #fff;
+    }
+  
+    input {
+      display: none;
+    }
+  
+    label {
+      cursor: pointer;
+    }
+  
+    input:checked + label {
+      background-color: $darker-accent-color;
+    }
+  }
+}
