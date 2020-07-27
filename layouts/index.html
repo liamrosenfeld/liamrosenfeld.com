@@ -1,74 +1,74 @@
 {{ define "main" }}
+<div id="home">
+  <!-- title area -->
+  <section id="main-title-area">
+    <div class="container">
+      <!-- Text-->
+      <h1>
+        {{ site.Data.homepage.banner.title | safeHTML }}
+      </h1>
 
-<!-- title area -->
-<section id="main-title-area">
-  <div class="container">
-    <!-- Text-->
-    <h1>
-      {{ site.Data.homepage.banner.title | safeHTML }}
-    </h1>
-
-    <!-- social icon -->
-    <div id="social">
-      {{ range site.Params.social }}
-      <a href="{{.URL | safeURL }}">
-        {{ $path:= (print "images/icons/" .icon)}}
-        <img
-          src="{{ $path | absURL }}"
-          alt="{{ .name }}"
-        />
-      </a>
-      {{ end }}
-      <a href="mailto:{{ site.Params.author.email }}">
-        <img
-          src="{{ `images/icons/mail.svg` | absURL }}"
-          alt="Email"
-        />
-      </a>
-      <a href="/posts/index.xml">
-        <img
-          src="{{ `images/icons/rss.svg` | absURL }}"
-          alt="RSS"
-        />
-      </a>
-  </div>
-</section>
-
-<!-- about -->
-<section id="about" class="section">
-  <p>{{site.Data.homepage.about.content | markdownify}}</p>
-</section>
-
-<!-- projects -->
-<section class="section">
-  <div class="container">
-    <h2>
-      Recent Projects
-    </h2>
-
-    <div class="gallery shuffle-wrapper">
-      {{ $count:= site.Data.homepage.projects.display_count }}
-      {{ range first $count (where .Site.RegularPages "Section" "projects") }}
-      {{ .Render "preview" }}
-      {{ end }}
+      <!-- social icon -->
+      <div id="social">
+        {{ range site.Params.social }}
+        <a href="{{.URL | safeURL }}">
+          {{ $path:= (print "images/icons/" .icon)}}
+          <img
+            src="{{ $path | absURL }}"
+            alt="{{ .name }}"
+          />
+        </a>
+        {{ end }}
+        <a href="mailto:{{ site.Params.author.email }}">
+          <img
+            src="{{ `images/icons/mail.svg` | absURL }}"
+            alt="Email"
+          />
+        </a>
+        <a href="/posts/index.xml">
+          <img
+            src="{{ `images/icons/rss.svg` | absURL }}"
+            alt="RSS"
+          />
+        </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- posts -->
-<section class="section">
-  <div class="container">
-    <h2>
-      Latest Posts
-    </h2>
+  <!-- about -->
+  <section id="about" class="section">
+    <p>{{site.Data.homepage.about.content | markdownify}}</p>
+  </section>
 
-    <div class="gallery shuffle-wrapper">
-      {{ $count:= site.Data.homepage.posts.display_count }}
-      {{ range first $count (where .Site.RegularPages "Section" "posts") }}
-      {{ .Render "preview" }}
-      {{ end }}
+  <!-- projects -->
+  <section class="section">
+    <div class="container">
+      <h2>
+        Recent Projects
+      </h2>
+
+      <div class="gallery shuffle-wrapper">
+        {{ $count:= site.Data.homepage.projects.display_count }}
+        {{ range first $count (where .Site.RegularPages "Section" "projects") }}
+        {{ .Render "preview" }}
+        {{ end }}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- posts -->
+  <section class="section">
+    <div class="container">
+      <h2>
+        Latest Posts
+      </h2>
+
+      <div class="gallery shuffle-wrapper">
+        {{ $count:= site.Data.homepage.posts.display_count }}
+        {{ range first $count (where .Site.RegularPages "Section" "posts") }}
+        {{ .Render "preview" }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</div>
 {{end}}
