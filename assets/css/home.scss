@@ -34,13 +34,12 @@
   }
   
   #about {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     max-width: 50em;
   
     p {
       font-size: 20px;
-      font-family: playfair display, serif !important;
+      font-family: playfair display, serif;
       color: #000;
       margin: 1em;
     }
@@ -48,11 +47,11 @@
   
   .section {
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding: 50px 0;
+
     
     h2 {
-      margin-bottom: 80px;
+      margin-bottom: 40px;
       font-family: roboto, sans-serif;;
     }
   

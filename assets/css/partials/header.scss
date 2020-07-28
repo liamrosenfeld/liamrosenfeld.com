@@ -51,7 +51,7 @@
       text-decoration: none;
       color: rgba(255, 255, 255, 0.9);
       text-align: center;
-      margin: 5px auto;
+      margin: 10px auto;
 
       &.current {
         color: $accent-color;
@@ -91,7 +91,7 @@
 
       .nav-link {
         margin: 0;
-        margin-right: 15px;
+        margin-right: 25px;
 
         &:hover {
           color: rgba(255, 255, 255, 1);

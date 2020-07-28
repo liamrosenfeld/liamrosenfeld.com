@@ -1,5 +1,8 @@
+:root {
+  --bug: 0; // for some reason the home page title breaks without this
+}
+
 @import "variables";
-@import "legacy";
 @import "home";
 @import "shared";
 @import "partials/header";

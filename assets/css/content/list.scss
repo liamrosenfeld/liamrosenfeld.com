@@ -1,5 +1,4 @@
 .segmented-input {
-  margin: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -9,23 +8,23 @@
 
   .option {
     flex-grow: 1;
+    text-align: center;
 
     label {
-      text-align: center;
-      height: 100%;
       width: 100%;
-      margin: 0;
       font-size: 15px;
-      padding: 15px;
+      padding: 15px 20px;
       font-family: roboto, sans-serif;
       text-transform: capitalize;
       font-weight: 600;
       border: 0;
       position: relative;
       z-index: 1;
-      transition: 0.2s ease;
       background-color: $accent-color;
       color: #fff;
+      display: inline-block;
+      box-sizing: border-box;
+      text-align: center;
     }
   
     input {
@@ -43,5 +42,9 @@
 }
 
 .content-list {
-  margin: 4em 1em;
+  margin: 4em 6em;
+
+  @media (max-width: 575px) {
+    margin: 4em 1em;
+  }
 }
