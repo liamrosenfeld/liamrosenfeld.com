@@ -1,0 +1,11 @@
+{{ define "main"}}
+
+{{ partial "page-title.html" . }}
+
+<div style="text-align: center; margin: 5em">
+  <p>That link does not exist</p>
+  <p>Hopefully you're able to find the page you're looking for somewhere else</p>
+  <a href="{{ "/" | relURL }}">Go Home</a>
+</div>
+
+{{ end }}
