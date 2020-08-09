@@ -1,9 +1,14 @@
 #post-page {
+  $small-size: 800px;
+
   margin: 4em;
 
-  .content {
+  @media (max-width: $small-size) {
+    margin: 2em;
+  }
+
+  .content-body {
     margin: 0 auto;
-    max-width: 35em;
   }
 
   .tags {

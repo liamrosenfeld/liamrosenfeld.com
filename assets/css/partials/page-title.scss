@@ -1,12 +1,19 @@
 .page-title {
+  $small-size: 800px;
+  $extra-small-size: 500px;
+
   height: 450px;
   background-image: url("/images/backgrounds/pattern.png");
 
   .container {
-    padding-top: 250px;
+    padding-top: 225px;
     position: relative;
     z-index: 1;
     text-align: center;
+
+    @media (max-width: $small-size) {
+      padding-top: 200px;
+    }
 
     h1 {
       font-family: roboto, sans-serif;
