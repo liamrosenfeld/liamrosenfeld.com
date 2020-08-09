@@ -1,11 +1,20 @@
 .content-body {
   max-width: 35em;
-  
+
   p {
     line-height: 32px;
     margin-bottom: 30px;
   }
-  
+
+  .highlight {
+    margin: 0 0 25px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+    background-color: #272822;
+    border-radius: 16px;
+  }
+
   blockquote {
     display: inline-block;
     padding: 10px 20px;
