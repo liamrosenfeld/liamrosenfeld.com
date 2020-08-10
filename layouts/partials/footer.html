@@ -5,7 +5,3 @@
   </div>
 </footer>
 <!-- /footer -->
-
-<!-- Main Script -->
-{{ $script := resources.Get "js/script.js" | minify}}
-<script src="{{ $script.Permalink }}"></script>

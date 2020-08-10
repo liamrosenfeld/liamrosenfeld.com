@@ -18,11 +18,22 @@
   </nav>
 
   <script>
+    // mobile header
     let mainNav = document.getElementById("nav-links");
     let navBarToggle = document.getElementById("navbar-toggle");
 
     navBarToggle.addEventListener("click", () => {
       mainNav.classList.toggle("active");
     });
+
+    // sticky header
+    window.onscroll = () => {
+      let nav = document.getElementById("navbar");
+      if (window.scrollY > 100) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
+    };
   </script>
 </header>
