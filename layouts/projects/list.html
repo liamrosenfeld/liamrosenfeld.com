@@ -24,43 +24,51 @@
       </span>
       {{ end }}
     </div>
-    <div id="shuffle-wrapper">
+    <div id="sort-items">
       {{ range .Data.Pages }}
       {{ .Render "preview" }}
       {{ end }}
     </div>
   </div>
 
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
-    integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
-    crossorigin="anonymous">
-  </script>
-
   <script>
-    var containerEl = document.getElementById("shuffle-wrapper");
-    if (!containerEl) {
-      console.error("shuffle-wrapper does not exist")
+    var container = document.getElementById("sort-items");
+    if (!container) {
+      console.error("sort-items does not exist");
     }
-
-    var Shuffle = window.Shuffle;
-    var myShuffle = new Shuffle(document.getElementById("shuffle-wrapper"), {
-      itemSelector: ".shuffle-item",
-      isCentered: true,
-      buffer: 1
-    });
     
-    let radioChanged = (radio) => {
-      if (radio.checked) {
-        myShuffle.filter(radio.value);
+    let filter = (selected) => {
+      if (selected == "all") { 
+        let items = document.getElementsByClassName("sort-item");
+        for (let item of items) {
+          item.classList.remove("diminish");
+        }
+      } else {
+        let hide = document.querySelectorAll(`#sort-items .sort-item:not([data-groups~="${selected}"])`);
+        for (let el of hide) {
+          el.classList.add("diminish");
+        }
+        let show = document.querySelectorAll(`#sort-items .sort-item[data-groups~="${selected}"]`);
+        for (let el of show) {
+          el.classList.remove("diminish");
+        }
       }
     }
     
+    // call filter on radio selection
+    let radioChanged = (radio) => {
+      if (radio.checked) {
+        filter(radio.value);
+      }
+    }
+    
+    // select what to filter by on window load
     const urlParams = new URLSearchParams(window.location.search);
-    const param = urlParams.get("category");
+    let param = urlParams.get("category");
     let component;
     if (param == null) {
       component = document.getElementById("radio-all");
+      param = "all";
     } else {
       component = document.getElementById("radio-" + param);
       if (component == null) {
@@ -68,7 +76,7 @@
       }
     }
     component.setAttribute("checked", "checked");
-    myShuffle.filter(param);
+    filter(param);
   </script>
 </section>
 <!-- /projects -->

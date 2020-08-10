@@ -1,6 +1,6 @@
 <article
-  class="preview-card shuffle-item"
-  data-groups='[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}"{{. | urlize}}"{{ end }}]'
+  class="preview-card sort-item"
+  data-groups="{{range $index, $element:= .Params.categories }}{{if ne $index 0}} {{end}}{{. | urlize}}{{ end }}"
 >
   <img
     src="{{.Params.Image | relURL}}"
