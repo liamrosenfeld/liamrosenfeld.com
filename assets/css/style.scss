@@ -1,10 +1,6 @@
-:root {
-  --bug: 0; // for some reason the home page title breaks without this
-}
-
 @import "variables";
-@import "home";
 @import "shared";
+@import "home";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/page-title";

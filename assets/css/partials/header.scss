@@ -17,12 +17,12 @@
 
   @media (max-width: $nav-mobile-size) {
     padding: 30px;
-    background: $primary-color;
+    background: var(--marginals-color);
   }
 
   // when scrolled
   &.scrolled {
-    background-color: $primary-color;
+    background-color: var(--marginals-color);
     padding: 20px 40px;
   }
 
@@ -44,12 +44,12 @@
 
     .nav-link {
       text-decoration: none;
-      color: rgba(255, 255, 255, 0.9);
+      color: #fff;
       text-align: center;
       margin: 10px auto;
 
       &.current {
-        color: $accent-color;
+        color: var(--accent-color);
       }
     }
 
@@ -58,12 +58,12 @@
   .title {
     font-size: 22px;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
   }
   
   #navbar-toggle {
     cursor: pointer;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     font-size: 24px;
     user-select: none;
   }
@@ -90,7 +90,7 @@
         margin-right: 25px;
 
         &:hover {
-          color: rgba(255, 255, 255, 1);
+          color: var(--darker-accent-color);
         }
       }
     }
@@ -100,7 +100,7 @@
     }
   
     .title:hover {
-      color: rgba(255, 255, 255, 1);
+      color: #fff;
     }
   }
 }

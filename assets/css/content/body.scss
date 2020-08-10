@@ -18,8 +18,8 @@
   blockquote {
     display: inline-block;
     padding: 10px 20px;
-    background: #eaeaea;
-    border-left: 2px solid $primary-color;
+    background: var(--em-background-color);
+    border-left: 2px solid var(--body-text-color);
     font-style: italic;
     font-size: 22px;
   }

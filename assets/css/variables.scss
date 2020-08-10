@@ -1,4 +1,19 @@
-$primary-color: #222222;
-$accent-color: #4da2e7;
-$darker-accent-color: #238ce2;
-$body-text-color: #4c4c4c;
+:root {
+  --marginals-color: #222222;
+  --accent-color: #4da2e7;
+  --darker-accent-color: #238ce2;
+  --body-text-color: #424242;
+  --background-color: #fff;
+  --heading-color: #000;
+  --em-background-color: #f7f7f7;
+
+  @media (prefers-color-scheme: dark) {
+    --marginals-color: #1d1d1d;
+    --accent-color: #1f4b6e;
+    --darker-accent-color: #446077;
+    --body-text-color: #e9e9e9;
+    --background-color: #222222;
+    --heading-color: #fff;
+    --em-background-color: #313131;
+  }
+}

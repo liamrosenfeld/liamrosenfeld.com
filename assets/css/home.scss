@@ -2,6 +2,7 @@
   #main-title-area {
     height: 500px;
     background-image: url("../images/backgrounds/pattern.png");
+    background-color: var(--marginals-color);
     overflow: hidden;
   
     .container {
@@ -40,7 +41,6 @@
     p {
       font-size: 20px;
       font-family: playfair display, serif;
-      color: #000;
       margin: 1em;
     }
   }
