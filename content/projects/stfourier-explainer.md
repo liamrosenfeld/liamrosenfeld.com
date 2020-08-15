@@ -5,10 +5,10 @@ image: "images/projects/stfourier-explainer.png"
 code_url: "https://github.com/liamrosenfeld/STFourierExplainer"
 categories: ["academic", "swift", "WWDC"]
 draft: false
-blurb: "My WWDC20 Swift Student Challenge submission"
+blurb: "My accepted WWDC20 Swift Student Challenge submission"
 ---
 
-My WWDC20 Swift Student Challenge submission. It guides you along the creation of multiple live views that all utilize the Short Time Fast Fourier Transform and its inverse. The goal of the playground is to guide the user along a path of learning in the fields of both programming and digital signal processing.
+My accepted WWDC20 Swift Student Challenge submission. It guides you along the creation of multiple live views that all utilize the Short Time Fast Fourier Transform and its inverse. The goal of the playground is to guide the user along a path of learning in the fields of both programming and digital signal processing.
 
 The year prior I was lucky enough to earn a WWDC19 scholarship with a playground that used a discrete Fourier transform to draw a path using a series of orbiting epicycles. When explaining my project, the most common question I received was "what is it good for?". I would respond "well for this application? just looking cool." However, I continued learning about that area of mathematics and found how Fourier transforms apply to digital signal processing. As a member of my high school band, and general music lover, that intrigued me and I went down the rabbit hole of research.
 
