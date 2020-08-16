@@ -3,7 +3,7 @@ title: "STFT Explainer"
 date: 2020-05-18
 image: "images/projects/stfourier-explainer.png"
 code_url: "https://github.com/liamrosenfeld/STFourierExplainer"
-categories: ["academic", "swift", "WWDC"]
+categories: ["academic", "swift"]
 draft: false
 blurb: "My accepted WWDC20 Swift Student Challenge submission"
 ---

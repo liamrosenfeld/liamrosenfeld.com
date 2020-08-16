@@ -21,15 +21,17 @@
     }
   
     h1 {
-      z-index: 2;
       color: white;
-      font-family: roboto, sans-serif;
     }
   
     #social {
       img {
-        padding-right: 10px;
+        margin-right: 10px;
         height: 25px;
+
+        &:hover {
+          opacity: 0.85;
+        }
       }
     }
   }
@@ -40,8 +42,8 @@
   
     p {
       font-size: 20px;
-      font-family: playfair display, serif;
       margin: 1em;
+      text-align: justify;
     }
   }
   
@@ -52,7 +54,6 @@
     
     h2 {
       margin-bottom: 40px;
-      font-family: roboto, sans-serif;;
     }
   
     .gallery {

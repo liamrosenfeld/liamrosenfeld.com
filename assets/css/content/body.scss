@@ -3,7 +3,7 @@
 
   p {
     line-height: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .highlight {
@@ -18,9 +18,14 @@
   blockquote {
     display: inline-block;
     padding: 10px 20px;
+    margin-bottom: 20px;
     background: var(--em-background-color);
     border-left: 2px solid var(--body-text-color);
     font-style: italic;
     font-size: 22px;
+
+    p {
+      margin-bottom: 0;
+    }
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: var(--accent-color);
+  background-color: var(--button-color);
   border-radius: 10px;
   overflow: hidden;
 
@@ -11,17 +11,19 @@
     text-align: center;
 
     label {
-      width: 100%;
+      // font
+      font-family: Lato, sans-serif;
+      font-weight: 700;
       font-size: 15px;
-      padding: 15px 20px;
-      font-family: roboto, sans-serif;
       text-transform: capitalize;
-      font-weight: 600;
-      border: 0;
-      position: relative;
-      z-index: 1;
-      background-color: var(--accent-color);
+
+      // color
+      background-color: var(--button-color);
       color: #fff;
+
+      // placement
+      width: 100%;
+      padding: 15px 20px;
       display: inline-block;
       box-sizing: border-box;
       text-align: center;
@@ -36,7 +38,7 @@
     }
   
     input:checked + label {
-      background-color: var(--darker-accent-color);
+      background-color: var(--selected-button-color);
     }
   }
 }

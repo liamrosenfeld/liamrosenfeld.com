@@ -3,7 +3,7 @@ title: "Fourier Artist"
 date: 2019-03-25
 image: "images/projects/fourier-artist.png"
 code_url: "https://github.com/liamrosenfeld/FourierArtist"
-categories: ["academic", "swift", "WWDC"]
+categories: ["academic", "swift"]
 draft: false
 blurb: "My accepted WWDC19 Scholarship Application"
 ---

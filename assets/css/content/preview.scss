@@ -1,5 +1,5 @@
 .preview-card {
-  background-color: var(--em-background-color);
+  background-color: var(--card-bg-color);
   border: 1px solid #dfdfdf;
   box-shadow: 0 18px 39.1px 6.9px rgba(224, 241, 255, 0.34);
   border-radius: 0.3rem;
@@ -41,21 +41,26 @@
     }
     
     .button {
-      width: auto;
+      // font
+      font-family: Lato, sans-serif;
       font-size: 15px;
-      padding: 8px 15px;
-      font-family: roboto, sans-serif;
-      border-radius: 5px;
-      font-weight: 600;
-      border: 0;
-      background-color: var(--accent-color);
+      font-weight: 700;
+
+      // color
+      background-color: var(--button-color);
       color: #fff;
-      margin-top: 20px;
-      display: inline-block;
 
       &:hover, &:focus {
-        background-color: var(--darker-accent-color);
+        background-color: var(--selected-button-color);
       }
+
+      // placement
+      width: auto;
+      padding: 8px 15px;
+      border-radius: 5px;
+      border: 0;
+      margin-top: 20px;
+      display: inline-block;
     }
   }
 }

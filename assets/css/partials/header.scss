@@ -47,12 +47,7 @@
       color: #fff;
       text-align: center;
       margin: 10px auto;
-
-      &.current {
-        color: var(--accent-color);
-      }
     }
-
   }
   
   .title {
@@ -90,17 +85,13 @@
         margin-right: 25px;
 
         &:hover {
-          color: var(--darker-accent-color);
+          opacity: 0.85;
         }
       }
     }
   
     #navbar-toggle {
       display: none;
-    }
-  
-    .title:hover {
-      color: #fff;
     }
   }
 }
