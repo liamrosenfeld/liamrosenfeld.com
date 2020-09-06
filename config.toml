@@ -1,5 +1,5 @@
 # default configuration
-baseURL = "https://www.liamrosenfeld.com"
+baseURL = "https://liamrosenfeld.com"
 summaryLength = "10"
 title = "Liam Rosenfeld"
 
