@@ -11,6 +11,44 @@
     margin: 0 auto;
   }
 
+  ol {
+    // text
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--body-text-color);
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: Lato, sans-serif;
+
+    // list
+    display: block;
+    list-style-type: decimal;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+
+  // inline code
+  code:not([class])  {
+    // text
+    color: var(--body-text-color);
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+
+    // background
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: #dddddd;
+    border-radius: 6px;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: #383838;
+    }
+  }
+  
+
   .tags {
     display: flex;
     flex-direction: row;
