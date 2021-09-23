@@ -11,7 +11,12 @@
     margin: 0 auto;
   }
 
-  ol {
+  h2 {
+    font-size: 2.25em;
+    padding-bottom: 10px;
+  }
+
+  ol, ul {
     // text
     line-height: 1.8;
     font-weight: 400;
@@ -22,10 +27,13 @@
 
     // list
     display: block;
-    list-style-type: decimal;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 
   // inline code
