@@ -9,4 +9,4 @@ draft: false
 blurb: "A Chrome extension that turns all images into Porgs"
 ---
 
-Porgify is a chrome extension that turns all images into Porgs. Created during the year 'The Force Awakens' came out, it was my first foray into the world of open source.
+Porgify is a chrome extension that turns all images into Porgs. I created as a joke the year that 'The Force Awakens' came out. It was a really great introduction to open source because I created it during Hacktoberfest 2017 so people would stop by the repo and leave improvements, which made me feel welcomed by that new and massive community.
