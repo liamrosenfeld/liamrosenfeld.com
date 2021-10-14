@@ -21,4 +21,4 @@ One problem I had to overcome was that I wanted the editor to update live, howev
 
 During my time at WWDC19 as a scholar, I attended a macOS design consultation for Iconology. The conversation was very informative for me and directly contributed to the designs of the position selector and custom preset editor. Having a better idea on how to apply the Human Interface Guidelines also helped me on this app along with future projects.
 
-Currently, I am working on the first large update for the app. It will hopefully bring a refreshed interface designed with Big Sur in mind and improved macOS icon generation (more accurate masking and shadows).
+Currently, I am working on the first large update for the app. It will hopefully bring a refreshed interface designed with Big Sur in mind and improved macOS icon generation (more accurate masking and shadows). Adding the feature to round icons in the style of Apple icons was quite a journey and I have documented it in detail [here](/posts/apple_icon_quest/).
