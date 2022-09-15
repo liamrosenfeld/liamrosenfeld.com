@@ -29,17 +29,6 @@ description = "Liam Rosenfeld's Website."
 name = "Liam Rosenfeld"
 email = "me@liamrosenfeld.com"
 
-# social sites
-[[params.social]]
-name = "twitter"
-icon = "twitter.svg"
-URL = "https://twitter.com/liamrosenfeld"
-
-[[params.social]]
-name = "github"
-icon = "github.svg"
-URL = "https://github.com/liamrosenfeld"
-
 # Disable the default taxonomies
 [taxonomies]
 tag = ""

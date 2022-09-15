@@ -10,8 +10,8 @@
 
       <!-- social icon -->
       <div id="social">
-        {{ range site.Params.social }}
-        <a href="{{.URL | safeURL }}">
+        {{ range site.Data.homepage.social }}
+        <a href="{{.url | safeURL }}">
           {{ $path:= (print "images/icons/" .icon)}}
           <img
             src="{{ $path | absURL }}"
