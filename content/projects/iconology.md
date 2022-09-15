@@ -4,7 +4,7 @@ date: 2019-02-25
 image: "images/projects/iconology.png"
 project_url: "https://apps.apple.com/us/app/iconology/id1463452867"
 code_url: "https://github.com/liamrosenfeld/Iconology"
-categories: ["full", "swift"]
+categories: ["native", "swift"]
 draft: false
 blurb: "A macOS app for creating app icons"
 ---

@@ -372,6 +372,6 @@ After working with squircles for a bit, I had hoped there would an elegant equat
 
 I think this is a testament to sweating the details. While large parts of this endeavor could very well qualify as yak-shaving, I felt that it ultimately paid off for Iconology. Iconology can now generate icons exactly like the given macOS template, and the work put into squircles isn't going to waste because they are being added as an additional feature.
 
-[^1]: It also couldn't be a mask created by rasterize continuously curved CALayer because I needed to draw shadows along the curve
+[^1]: It also couldn't be a mask created by rasterizing a continuously curved CALayer because I needed to draw shadows along the curve
 [^2]: While values of n not equal to 4 technically isn't a squircle, it seems to be common to still call super-ellipses of n values that are close enough to 4 squircles—possibly because squircle is just a fun word to say.
 [^3]: The helper function naming is representative of the purpose they serve in the iOS curve. Technically their names should be swapped on macOS because the origin is on the bottom left.

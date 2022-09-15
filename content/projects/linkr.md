@@ -3,7 +3,7 @@ title: "Linkr"
 date: 2020-07-01
 image: "images/projects/linkr.png"
 code_url: "https://github.com/liamrosenfeld/linkr"
-categories: ["web"]
+categories: ["web", "rust"]
 draft: false
 blurb: "A modern self-hosted URL Shortener for both individuals and organizations that’s easy to set up and use."
 ---
