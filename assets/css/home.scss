@@ -30,10 +30,11 @@
 
       img {
         margin-right: 10px;
-        height: 25px;
+        height: 30px;
+        filter: invert(100%);
 
         &:hover {
-          opacity: 0.85;
+          opacity: 0.8;
         }
       }
     }

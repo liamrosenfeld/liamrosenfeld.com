@@ -3,7 +3,7 @@ title: "Animated Screen Savers"
 date: 2021-06-01
 image: "images/projects/animated-screen-savers.png"
 code_url: "https://github.com/liamrosenfeld/AnimatedScreenSavers"
-categories: ["swift", "fun"]
+categories: ["swift", "academic"]
 draft: false
 blurb: "A collection of programmatic animations running as screen savers"
 ---
