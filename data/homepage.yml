@@ -11,12 +11,15 @@ posts:
   display_count: 3
 
 social:
-  - name: "twitter"
-    icon: "twitter.svg"
-    url: "https://twitter.com/liamrosenfeld"
   - name: "github"
     icon: "github.svg"
     url: "https://github.com/liamrosenfeld"
+  - name: "twitter"
+    icon: "twitter.svg"
+    url: "https://twitter.com/liamrosenfeld"
   - name: "linkedin"
     icon: "linkedin.svg"
     url: "https://www.linkedin.com/in/liamrosenfeld/"
+  - name: "resume"
+    icon: "paper.svg"
+    url: "/resume.pdf"
