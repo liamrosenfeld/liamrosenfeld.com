@@ -2,7 +2,7 @@ banner:
   title: "Hi, I'm Liam!"
 
 about:
-  content: "I'm a student studying computer science and mathematics at the University of Florida with a passion for development, music, and making things. I like exploring the crossroads of programing, math, and music wherever they may lie. My favorite programming languages are Swift and Rust. I typically work on native apps for Apple platforms and backend web development. I am also an Apple WWDC19 and WWDC20 Scholar."
+  content: "I'm currently studying computer engineering and mathematics at the University of Florida. I have a passion for computing, math, and music. I especially enjoy exploring their crossroads—wherever they may lie. My favorite programming languages are Swift and Rust and I typically work on native apps for Apple platforms along with backend web development. I am also an Apple WWDC19 and WWDC20 Scholar."
 
 projects:
   display_count: 3
