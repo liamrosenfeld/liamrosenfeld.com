@@ -17,6 +17,10 @@ social:
   - name: "twitter"
     icon: "twitter.svg"
     url: "https://twitter.com/liamrosenfeld"
+  - name: "mastodon"
+    icon: "mastodon.svg"
+    url: "https://mastodon.social/@liamrosenfeld"
+    relme: true
   - name: "linkedin"
     icon: "linkedin.svg"
     url: "https://www.linkedin.com/in/liamrosenfeld/"

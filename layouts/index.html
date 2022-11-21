@@ -11,21 +11,15 @@
       <!-- social icon -->
       <div id="social">
         {{ range site.Data.homepage.social }}
-        <a href="{{.url | safeURL }}">
+        <a href="{{.url | safeURL }}" {{ if .relme }} rel="me" {{ end }}>
           {{ $path:= (print "images/icons/" .icon)}}
-          <img
-            src="{{ $path | absURL }}"
-            alt="{{ .name }}"
-          />
+          <img src="{{ $path | absURL }}" alt="{{ .name }}" />
         </a>
         {{ end }}
         <a href="mailto:{{ site.Params.author.email }}">
-          <img
-            src="{{ `images/icons/mail.svg` | absURL }}"
-            alt="Email"
-          />
+          <img src="{{ `images/icons/mail.svg` | absURL }}" alt="Email" />
         </a>
-    </div>
+      </div>
   </section>
 
   <!-- about -->
