@@ -2,7 +2,7 @@ banner:
   title: "Hi, I'm Liam!"
 
 about:
-  content: "I'm currently studying computer engineering and mathematics at the University of Florida. I have a passion for computing, math, and music. I especially enjoy exploring their crossroads—wherever they may lie. My favorite programming languages are Swift and Rust and I typically work on native apps for Apple platforms along with backend web development. I am also an Apple WWDC19 and WWDC20 Scholar."
+  content: "I'm currently studying computer engineering and mathematics at the University of Florida and interned on Productivity Apps at Apple. I have a passion for computing, math, and music. I especially enjoy exploring their crossroads—wherever they may lie. My favorite programming languages are Swift and Rust and I typically work on native apps for Apple platforms along with embedded development. I am also an Apple WWDC19 and WWDC20 Scholar."
 
 projects:
   display_count: 3
@@ -14,9 +14,6 @@ social:
   - name: "github"
     icon: "github.svg"
     url: "https://github.com/liamrosenfeld"
-  - name: "twitter"
-    icon: "twitter.svg"
-    url: "https://twitter.com/liamrosenfeld"
   - name: "mastodon"
     icon: "mastodon.svg"
     url: "https://mastodon.social/@liamrosenfeld"
