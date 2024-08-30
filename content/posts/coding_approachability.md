@@ -2,6 +2,7 @@
 title: "Approachability of Coding Classes"
 date: 2020-09-06
 tags: ["thoughts", "education"]
+unlisted: true
 ---
 I love to code. Through a combination of classes and self-instruction, I got to the point where I could be a teacher assistant in my AP Computer Science Principles class to help implement a new curriculum. I have also worked to encourage participation in computer education by starting a coding club. During those activities and interactions with my peers, I observed common patterns preventing students who are curious about programming from exploring it further and developing it into a love for programming.
 
@@ -15,12 +16,10 @@ Newer languages can also provide similar benefits. Languages such a Swift allow 
 
 When the relatively simple syntax of modern languages is combined with a helpful integrated development environment, the frustrations of starting a new text-based language are greatly reduced. While staring at a blank file may be intimidating when unguided, the entire course and tooling are there to lead the student along their way.
 
-Even though these create a considerably more beginner-friendly starting point and aid in learning, they do little to help the learner make their first step. The prevalent attitude of code as an unreachable skill remains unchanged. That indifference signals that the repelling force is likely caused by a lack of familiarity. 
+Even though these create a considerably more beginner-friendly starting point and aid in learning, they do little to help the learner make their first step. The prevalent attitude of code as an unreachable skill remains unchanged. That indifference signals that the repelling force is likely caused by a lack of familiarity.
 
 To break down this fear of code, address the lack of familiarity instead of watering down coding curriculums. Give the students small non-committal experiences with concepts covered at the start of the curriculum. I found this approach particularly useful in the high school coding club.
 
 For the coding club, there is no sign up or repeat commitment. People of all skill levels can show up and do activities at their skill level. One of the most popular aspects was the Swift and Python lessons because they were made so people with no prior experience could participate.
 
-> “Coding Club made me feel more capable and confident even though it was just the basic stuff. It made me less scared to take AP Computer Science Principles.” - Ella Thrasher, 12th Grade
-
-While anecdotal, this attitude is generally prevalent in my high school’s coding club. I believe fostering that attitude is one of the reasons we see continued growth. I’m hopeful that educational tooling and introductory experiences could be used at more high schools to help coding classes feel more approachable all around.
+Anecdotally, the attitude of feeling more confident to take coding classes was prevalent in my high school’s coding club. I believe fostering that attitude is one of the reasons we see continued growth. I’m hopeful that educational tooling and introductory experiences could be used at more high schools to help coding classes feel more approachable all around.

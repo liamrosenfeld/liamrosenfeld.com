@@ -2,6 +2,7 @@
 title: "The AP Compromise in Computer Science Principles"
 date: 2020-09-08
 tags: ["thoughts", "education"]
+unlisted: true
 ---
 
 Last year, I was a teaching an AP Computer Science Principles class to help develop and implement a new curriculum. A group of twelve students volunteered to learn Swift as the programming language for the course. Using Apple’s curriculum, I taught them iOS development in Swift while working with the teacher to tweak the curriculum for effective use it in future years.
@@ -42,7 +43,6 @@ That is why the AP in AP Computer Science Principles is a compromise, and a nece
 
 For this compromise to change there would need to be larger, structural changes in high school education.
 
-[^1]: And boy, they sure do promote it. Recently, APCSP has been a golden child of the College Board. Everything from the sentiment of [promotional posters](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/recruitment-toolkit) they distribute to the schools to the [informational website](https://apcentral.collegeboard.org/courses/ap-computer-science-principles) being a big promotion of the class. If you compare that to [their website for AP Computer Science A](https://apcentral.collegeboard.org/courses/ap-computer-science-a), the difference becomes even more apparent as it consists of little more than a download link to a 220 page PDF with an extremely verbose list of every concept covered in the course. 
+[^1]: And boy, they sure do promote it. Recently, APCSP has been a golden child of the College Board. Everything from the sentiment of [promotional posters](https://apcentral.collegeboard.org/courses/ap-computer-science-principles/recruitment-toolkit) they distribute to the schools to the [informational website](https://apcentral.collegeboard.org/courses/ap-computer-science-principles) being a big promotion of the class. If you compare that to [their website for AP Computer Science A](https://apcentral.collegeboard.org/courses/ap-computer-science-a), the difference becomes even more apparent as it consists of little more than a download link to a 220 page PDF with an extremely verbose list of every concept covered in the course.
 
 [^2]: I feel like this may be more indicative that the weighted GPA system is just broken because schools are in a race to inflate the worth of classes. Exploring that is beyond the scope of this post.
-

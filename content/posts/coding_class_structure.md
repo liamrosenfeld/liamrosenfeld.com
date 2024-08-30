@@ -2,6 +2,7 @@
 title: "Structure of Intro Coding Classes"
 date: 2020-09-07
 tags: ["thoughts", "education"]
+unlisted: true
 ---
 
 This is an article intended to be a more specific analysis of my experiences instead of general thoughts on the subject.
@@ -35,7 +36,7 @@ The structure of the class ended up falling more into:
 
 While separating the projects from the fundamentals is less efficient than combining them, that separation is very important to prevent presenting an overwhelming amount of new information. It is easy to lose track of how much boilerplate and complexity is present in just a new Xcode project after working with them for a while, but there is a considerable amount.
 
-Source control was included as a necessity as we had little warning before a computer was wiped, though it quickly became a very valuable lesson for many reasons. First off, it is an often neglected topic in computer science education that is required for any involvement outside of the class. Additionally, having to summarize each change in a commit message helps students learn by having them explain it in a way someone else would understand along with helping them better understand the slow growth that goes into a full project. 
+Source control was included as a necessity as we had little warning before a computer was wiped, though it quickly became a very valuable lesson for many reasons. First off, it is an often neglected topic in computer science education that is required for any involvement outside of the class. Additionally, having to summarize each change in a commit message helps students learn by having them explain it in a way someone else would understand along with helping them better understand the slow growth that goes into a full project.
 
 ## Motivation Through The Joy of Making
 

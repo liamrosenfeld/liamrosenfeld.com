@@ -1,7 +1,8 @@
 # default configuration
+title = "Liam Rosenfeld"
 baseURL = "https://liamrosenfeld.com"
 summaryLength = "10"
-title = "Liam Rosenfeld"
+disableKinds = ["taxonomy", "term"]
 
 # menu
 [[menu.main]]
@@ -28,8 +29,3 @@ description = "Liam Rosenfeld's Website."
 [params.author]
 name = "Liam Rosenfeld"
 email = "me@liamrosenfeld.com"
-
-# Disable the default taxonomies
-[taxonomies]
-tag = ""
-category = ""

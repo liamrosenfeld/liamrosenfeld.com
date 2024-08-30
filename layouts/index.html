@@ -36,7 +36,7 @@
 
       <div class="gallery shuffle-wrapper">
         {{ $count:= site.Data.homepage.projects.display_count }}
-        {{ range first $count (where .Site.RegularPages "Section" "projects") }}
+        {{ range first $count (where (where .Site.RegularPages "Section" "projects") ".Params.unlisted" "!=" "true") }}
         {{ .Render "preview" }}
         {{ end }}
       </div>
@@ -52,7 +52,7 @@
 
       <div class="gallery shuffle-wrapper">
         {{ $count:= site.Data.homepage.posts.display_count }}
-        {{ range first $count (where .Site.RegularPages "Section" "posts") }}
+        {{ range first $count (where (where .Site.RegularPages "Section" "posts") ".Params.unlisted" "!=" "true") }}
         {{ .Render "preview" }}
         {{ end }}
       </div>

@@ -366,7 +366,7 @@ While those aren't pretty numbers, they work. When this new shape was popped int
 
 ## Takeaways
 
-I am really happy with how this went. I learned a lot along the way and it was a lot of fun chasing the solution. It was also a nice surprise that my multivariable calculus class set off the lightbulb of continuous curvature. 
+I am really happy with how this went. I learned a lot along the way and it was a lot of fun chasing the solution. It was also a nice surprise that my multivariable calculus class set off the lightbulb of continuous curvature.
 
 After working with squircles for a bit, I had hoped there would an elegant equation for the icon as if it was a squircle (the bézier curves do have an equation but it would be a beast of a piecewise parametric one). While that would have been satisfying, I'm happy that I eventually did figure out a solution even if it includes some ugly constants.
 

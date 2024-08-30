@@ -11,7 +11,7 @@
       </span>
       
       {{ $tags := slice }}
-      {{ range .Data.Pages }}
+      {{ range (where .Data.Pages ".Params.unlisted" "!=" "true") }}
       {{ range .Params.tags }}
       {{ $tags = $tags | append . }}
       {{ end }}
@@ -25,7 +25,7 @@
       {{ end }}
     </div>
     <div id="sort-items">
-      {{ range .Data.Pages }}
+      {{ range (where .Data.Pages ".Params.unlisted" "!=" "true") }}
       {{ .Render "preview" }}
       {{ end }}
     </div>

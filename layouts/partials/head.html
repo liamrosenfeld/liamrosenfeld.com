@@ -13,8 +13,10 @@
   {{ hugo.Generator }}
 
   <!-- Main Stylesheet -->
-  {{ $styles := resources.Get "css/style.scss" | resources.ToCSS | minify }}
-  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
+  {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+  {{ with resources.Get "css/style.scss" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{ end }}
 
   {{ with .Params.katex}}
   <!-- KaTeX -->

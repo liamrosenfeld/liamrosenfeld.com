@@ -8,9 +8,7 @@ draft: false
 blurb: "My accepted WWDC19 Scholarship Application"
 ---
 
-My accepted WWDC19 Scholarship Application. It takes in a path and then uses the Discrete Fourier Transform to animate it as a series of orbiting epicycles. 
-
-It also utilizes the playgrounds format of the submission to also explain how the math relates to the code and so that the reader would be able to 
+My accepted WWDC19 Scholarship Application. It takes in a path and then uses the Discrete Fourier Transform to animate it as a series of orbiting epicycles. It utilizes the playgrounds format of the submission to also explain how the math relates to the code.
 
 This was such a fun project to work on because it involved learning a lot of new and fascinating math and resulted in an extremely visually satisfying final product.
 
